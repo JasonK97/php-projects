@@ -1,0 +1,21 @@
+#div1 {
+    text-align: center;
+    padding: 75px;
+    background-color: blue;
+}
+
+#div2 {
+    text-align: center;
+    padding: 75px;
+    background-color: green;
+}
+
+#div3 {
+    text-align: center;
+    padding: 75px;
+    background-color: yellow;
+}
+
+div:hover {
+    font-weight: bold;
+}
