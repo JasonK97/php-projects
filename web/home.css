@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(65, 0, 0);
+}
+
+#block {
+    background-color: rgb(99, 99, 99);
+    border-color: black;
+    padding: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Zilla Slab', serif;
+}
+
+.info {
+    text-align: center;
+    font-family: 'Zilla Slab', serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(97, 0, 0);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
