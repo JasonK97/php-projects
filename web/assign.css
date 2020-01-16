@@ -13,7 +13,8 @@ body {
 
 #title {
     text-align: center;
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
 }
 
 a {
