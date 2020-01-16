@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+.numberedDivs {
+    width: 80%;
+    margin: 10px 0 10px 10%;
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}

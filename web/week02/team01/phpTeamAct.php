@@ -8,6 +8,7 @@
   <title>PHP Team Activity</title>
 </head>
 <body>
+<h1>PHP Team Activity</h1>
   <?php
   for ($i = 0; $i < 10; $i++)  { ?>
       <div id="<?php echo $i; ?>" class="numberedDivs"
