@@ -20,7 +20,7 @@
             Washington, born and raised. I like the snow, but I hate the wind, so Rexburg is a win/lose.
         </p><br><br>
         <a href="landingPage.php"><strong>Back to Landing Page</strong></a>
-        <?php echo "<p id='date'>Today is " . date("Y/m/d") . "</p>"; ?>
+        <?php echo "<p id='date'>Today is " . date("m/d/y") . "</p>"; ?>
     </div>
 </body>
 </html>
