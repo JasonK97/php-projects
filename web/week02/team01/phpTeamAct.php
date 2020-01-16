@@ -10,7 +10,7 @@
 <body>
   <?php
   for ($i = 0; $i < 10; $i++) {
-      echo "<div>This is a div</div>";
+      echo "<div>This is div #" . $i . "</div>";
   }
   ?>
 </body>
