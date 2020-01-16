@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(65, 0, 0);
+}
+
+#block {
+    background-color: rgb(99, 99, 99);
+    border-color: black;
+    padding: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+#title {
+    text-align: center;
+}
