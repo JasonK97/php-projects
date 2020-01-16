@@ -13,4 +13,15 @@ body {
 
 #title {
     text-align: center;
+    font-family: 'Zilla Slab', serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(97, 0, 0);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
 }
