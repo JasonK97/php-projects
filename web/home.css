@@ -37,3 +37,10 @@ a {
 a:hover {
     color: rgb(0, 0, 0);
 }
+
+#date {
+    float: left;
+    color: rgb(97, 0, 0);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+}

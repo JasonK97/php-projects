@@ -20,6 +20,7 @@
         <h2 class="info">Click here to learn more about me: <br><a href="aboutMe.php">About Me</a></h2>
         <br><br><br>
         <h2 class="info">Click here for my Weekly Assignments directory: <br><a href="index.php">Index</a></h2>
+        <?php echo "<p id='date'>Today is " . date("m/d/Y") . "</p>"; ?>
     </div>
 </body>
 
