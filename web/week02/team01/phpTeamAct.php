@@ -8,7 +8,10 @@
   <title>PHP Team Activity</title>
 </head>
 <body>
-  <?php echo "You smell." 
+  <?php
+  for ($i = 0; $i < 10; $i++) {
+      echo "<div>This is a div</div>";
+  }
   ?>
 </body>
 </html>
