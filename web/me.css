@@ -41,6 +41,8 @@ a:hover {
 }
 
 #date {
-    float: left;
+    float: right;
+    color: rgb(97, 0, 0);
     font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
 }
