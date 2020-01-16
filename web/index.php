@@ -10,7 +10,8 @@
 </head>
 <body>
   <div id="block">
-  <?php echo "<h1 id=\"title\">Coming Soon</h1>"?>
+  <?php echo "<h1 id=\"title\">Coming Soon</h1>" ?>
+  <a href="landingPage.html"><strong>Back to Landing Page</strong></a>
   </div>
 </body>
 </html>
