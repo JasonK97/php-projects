@@ -12,7 +12,7 @@
 <body>
   <div id="block">
   <?php echo "<h1 id=\"title\">Coming Soon</h1>" ?>
-  <a href="landingPage.html">Back to Landing Page</a>
+  <a href="landingPage.php">Back to Landing Page</a>
   </div>
 </body>
 </html>
