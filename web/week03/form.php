@@ -23,11 +23,6 @@
                 echo "<input type=\"radio\" name=\"major\" value=\"$value\"> $value<br>";
             }
         ?>
-        <input type="radio" name="major" value="Computer Science"> Computer Science<br>
-        <input type="radio" name="major" value="Computer Science"> Software Engineering<br>
-        <input type="radio" name="major" value="Web Design"> Web Design and Development<br>
-        <input type="radio" name="major" value="Computer Information"> Computer Information Technology<br>
-        <input type="radio" name="major" value="Computer Engineering"> Computer Engineering<br>
         <br>
         Select all of the continents you have visited:<br>
         <input type="checkbox" name="continent[]" value="North America"> North America<br>
