@@ -19,8 +19,8 @@
          echo "Comments: $comment<br><br>";
 
          echo "Visited continents: <br>";
-         if (!empty($continent)){
-            foreach($continent as $selected){
+         if (!empty($continents)){
+            foreach($continents as $selected){
                echo $continents[$selected] . "<br>";
             }
          }
