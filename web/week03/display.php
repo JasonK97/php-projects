@@ -7,10 +7,10 @@
          $comment = htmlspecialchars($_POST["comment"]);
          $continent = $_POST["continent"];
 
-         echo "Name: $name <br>";
-         echo "Email: <a href='mailto:$email'>$email</a><br>";
-         echo "Major: $major<br>";
-         echo "Comments: $comment<br>";
+         echo "Name: $name <br><br>";
+         echo "Email: <a href='mailto:$email'>$email</a><br><br>";
+         echo "Major: $major<br><br>";
+         echo "Comments: $comment<br><br>";
 
          echo "Visited continents: <br>";
          if (!empty($continent)){

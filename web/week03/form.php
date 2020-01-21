@@ -25,12 +25,17 @@
         ?>
         <br>
         Select all of the continents you have visited:<br>
-        <input type="checkbox" name="continent[]" value="North America"> North America<br>
-        <input type="checkbox" name="continent[]" value="South America"> South America<br>
-        <input type="checkbox" name="continent[]" value="Europe"> Europe<br>
-        <input type="checkbox" name="continent[]" value="Asia"> Asia<br>
-        <input type="checkbox" name="continent[]" value="Australia"> Australia<br>
-        <input type="checkbox" name="continent[]" value="Antarctica"> Antarctica<br>
+        <?php 
+            $continents = array("NA" => "North America",
+                                "SA" => "South America",
+                                "Eu" => "Europe",
+                                "As" => "Asia",
+                                "Au" => "Australia",
+                                "An" => "Antarctica");
+            foreach ($continents as $value) {
+                echo "<input type=\"checkbox\" name=\"continent[]\" value=\"$value\"> $value<br>";
+            }
+        ?>
         <br>
         Comments:<br>
         <textarea name="comment" rows="10" cols="30"></textarea>
