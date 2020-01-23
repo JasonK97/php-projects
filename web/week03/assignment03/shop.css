@@ -10,6 +10,10 @@ body {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
+#class {
+    float: right;
+}
+
 #main {
     font-family: 'Cabin', sans-serif;
 }
