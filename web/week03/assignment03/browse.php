@@ -13,10 +13,10 @@
 <body>
     <div id="header">
         <h1 id="title">Kent Emporium</h1>
-        <div id="class">
+        <form id="class">
             <input type="text">
             <button type="button">Go</button>
-        </div>
+        </form>
     </div>
 </body>
 
