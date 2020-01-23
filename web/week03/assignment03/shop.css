@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(111, 111, 111);
+}
+
 #header {
     color: rgb(1, 0, 77);
     display: block;
@@ -6,12 +10,13 @@
 #title {
     color: whitesmoke;
     float: left;
+    font-family: 'Bowlby One SC', cursive;
 }
 
 #right {
     float: right;
 }
 
-body {
-    background-color: rgb(111, 111, 111);
+#main {
+    font-family: 'Cabin', sans-serif;
 }
