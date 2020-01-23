@@ -13,9 +13,13 @@
     <div id="header">
         <h1 id="title">Kent Emporium</h1>
         <div id="right">
+            <br>
             <input type="text">
             <button type="button">Go</button>
         </div>
+    </div>
+    <div id="main">
+        
     </div>
 </body>
 

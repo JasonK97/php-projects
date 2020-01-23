@@ -1,5 +1,5 @@
 #header {
-    background-color: rgb(1, 0, 77);
+    color: rgb(1, 0, 77);
     display: block;
 }
 
@@ -10,4 +10,8 @@
 
 #right {
     float: right;
+}
+
+#main {
+    background-color: rgb(111, 111, 111);
 }
