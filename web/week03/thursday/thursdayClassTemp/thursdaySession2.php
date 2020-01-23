@@ -9,5 +9,5 @@
 
 <?php if(isset($_SESSION["pictureUrl"])) { ?>
    <h3>Again, for kicks... from a form</h3>
-   <img src="<?=$_SESSION["pictureUrl"]?>" >
+   <img src="<?=$_SESSION['pictureUrl']?>" >
 <?php } ?>
