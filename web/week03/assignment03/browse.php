@@ -23,7 +23,7 @@
     <form action="checkout.php" method="POST">
         <!--used from w3Schools-->
         <div class="card">
-            <img src=".jpg" alt="A Really Nice Pencil" style="width:100%">
+            <img src="image-asset.jpeg" alt="A Really Nice Pencil" style="width:100%">
             <h1>A Really Nice Pencil</h1>
             <p class="price">$19.99</p>
             <p>Carved from the wood of the great big tree in the movie Avatar, this is a nice pencil.</p>
