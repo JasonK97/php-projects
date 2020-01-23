@@ -23,6 +23,11 @@
          <input type="text" name="picture">
          <input type="submit" name="Submit" value="Submit!">
       </form>
-      <?php // set session variables using a form ?>
+      <?php 
+         if(isset($_POST['Submit'])) {
+            $_SESSION["pictureUrl"] = $_POST["picture"];
+         }
+         
+      ?>
    </body>
 </html>
