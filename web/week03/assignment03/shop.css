@@ -1,0 +1,13 @@
+#header {
+    background-color: rgb(1, 0, 77);
+    display: block;
+}
+
+#title {
+    color: whitesmoke;
+    float: left;
+}
+
+#right {
+    float: right;
+}
