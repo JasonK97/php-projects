@@ -21,7 +21,7 @@
       <h3>Just for kicks, let's try it with a form</h3>
       <form action="" method="POST">
          <input type="text" name="picture">
-         <input type="submit" name="Submit!">
+         <input type="submit" name="Submit" value="Submit!">
       </form>
       <?php // set session variables using a form ?>
    </body>
