@@ -14,7 +14,7 @@
          $_SESSION["favgame"];
          // echo that variables have been set
          echo "Your favorite color is " . $_SESSION["favcolor"] . "<br>";
-         echo "Your favorite animal is " . $_SESSION["favanimal"];
+         echo "Your favorite animal is " . $_SESSION["favanimal"] . "<br>";
 ?>
       <a href="thursdaySession2.php">Check the variables on another page</a>
 
