@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <div id="header">
-        <h1 id="title">Kent Emporium</h1>
-        <div id="class">
-            <input type="text">
-            <button type="button">Go</button>
+    <div class="header">
+        <a href="browse.php" class="logo">Kent Imporium</a>
+        <div class="header-right">
+            <a class="active" href="browse.php">Home</a>
+            <a href="">View Cart</a>
         </div>
     </div>
 

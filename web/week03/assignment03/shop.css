@@ -4,13 +4,27 @@ body {
     padding: 0px;
 }
 
-#header {
+.header {
     background: rgb(28, 27, 53);
-    font-size: 30px;
+    font-size: 20px;
     color: whitesmoke;
     padding: 10px;
+    overflow: hidden;
+}
+
+.header a.active {
+    background-color: white;
+    color: black;
+}
+
+.logo {
+    font-size: 30px;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
+
+.header-right {
+    float: right;
+  }
 
 #class {
     display: inline-block;
