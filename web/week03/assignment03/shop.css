@@ -5,13 +5,15 @@ body {
 #header {
     background: rgb(1, 0, 77);
     font-size: 30px;
+    color: whitesmoke;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
-#title {
+/* #title {
     color: whitesmoke;
     float: left;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-}
+} */
 
 #right {
     float: right;
