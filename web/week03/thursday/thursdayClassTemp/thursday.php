@@ -23,7 +23,7 @@
          }
       ?>
       <h3>To print all cookies:</h3>
-      <?php // print all cookies ?>
+      <?php print_r($_COOKIE) ?>
       <h3><a href="thursdayCookie.php">Now...to another page</a></h3>
       <h1><a href="thursdaySession1.php">Working with Sessions</a></h1>
    </body>
