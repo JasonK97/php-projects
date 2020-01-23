@@ -6,17 +6,8 @@ body {
     background: rgb(1, 0, 77);
     font-size: 30px;
     color: whitesmoke;
+    padding: 10px;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-}
-
-/* #title {
-    color: whitesmoke;
-    float: left;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-} */
-
-#right {
-    float: right;
 }
 
 #main {
