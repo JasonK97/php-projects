@@ -12,7 +12,7 @@
 
 <body>
     <div class="header">
-        <a href="browse.php" class="logo">Kent Imporium</a>
+        <a href="browse.php" class="logo">Kent Emporium</a>
         <div class="header-right">
             <a class="active" href="browse.php">Home</a>
             <a href="">View Cart</a>
