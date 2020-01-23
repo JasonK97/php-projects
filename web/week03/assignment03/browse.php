@@ -29,6 +29,23 @@
             <p>Carved from the wood of the great big tree in the movie Avatar, this is a nice pencil.</p>
             <p><button>Add to Cart</button></p>
         </div>
+        <br>
+        <div class="card">
+            <img src="oneRing.jpg" alt="The One Ring" style="width:100%">
+            <h1>The One Ring</h1>
+            <p class="price">$499.99</p>
+            <p>Forged in the great Mount Doom, this ring is all powerful and provides the ability to go invisible. Previously owned by the Dark Lord himself, Sauron!</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <br>
+        <div class="card">
+            <img src="stunPhaser.jpg" alt="Set Phasers to Stun" style="width:100%">
+            <h1>Stun Phaser</h1>
+            <p class="price">$34.99</p>
+            <p>Created for use of officers of Starfleet, we finally got the ability to disable the kill function and sell to the general public.</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <br>
     </form>
 </body>
 
