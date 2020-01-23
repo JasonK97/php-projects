@@ -25,6 +25,7 @@ body {
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
   .header a.logo {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
     font-size: 25px;
     font-weight: bold;
   }
@@ -58,15 +59,14 @@ body {
     }
   }
 
-  /*  font-family: 'ZCOOL QingKe HuangYou', cursive;*/
-
 #class {
     display: inline-block;
 }
 
-/* #main {
+#main {
+    text-align:center;
     font-family: 'Cabin', sans-serif;
-} */
+}
 
 /*used from w3Schools*/
 .card {

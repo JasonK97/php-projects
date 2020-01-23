@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <h1 style="text-align:center;">Items for Purchase</h1>
+    <h1 id="main">Items for Purchase</h1>
     <form action="" method="POST">
         <!--used from w3Schools-->
         <div class="card">
