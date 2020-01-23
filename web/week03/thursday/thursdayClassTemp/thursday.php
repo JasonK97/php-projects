@@ -15,6 +15,12 @@
       <h3>Check if a single cookie exists and print it</h3>
       <?php
          // if cookie exists, echo it, otherwise echo that it doesn't have a value
+         if(!isset($_COOKIE[$cookie_name])) {
+            echo "Cookie named $cookie_name has not been set";
+         } else {
+            echo "Cookie named $cookie_name is set";
+            echo "Value is " . $COOKIE[$cookie_name];
+         }
       ?>
       <h3>To print all cookies:</h3>
       <?php // print all cookies ?>
