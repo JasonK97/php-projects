@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +24,7 @@
     </div>
 
     <h1 id="main">Items for Purchase</h1>
-    <form action="" method="POST">
+    <form action="cart.php" method="POST">
         <!--used from w3Schools-->
         <div class="card">
             <img src="image-asset.jpeg" alt="A Really Nice Pencil" style="width:100%">
