@@ -12,7 +12,7 @@
 
 <body>
     <div id="header">
-        <h1 id="title">K e n t   E m p o r i u m</h1>
+        <h1 id="title">K e n t    E m p o r i u m</h1>
         <div id="right">
             <br><br>
             <input type="text">
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div id="main">
-        <p>main goes here</p>
+        <h2>Stuff</h2>
     </div>
 </body>
 
