@@ -3,7 +3,8 @@ body {
 }
 
 #header {
-    color: rgb(1, 0, 77);
+    background: rgb(1, 0, 77);
+    font-size: 30px;
 }
 
 #title {
