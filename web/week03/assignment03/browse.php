@@ -13,8 +13,10 @@
 <body>
     <div id="header">
         <h1 id="title">Kent Emporium</h1>
-        <input type="text">
-        <button type="button">Go</button>
+        <div id="class">
+            <input type="text">
+            <button type="button">Go</button>
+        </div>
     </div>
 </body>
 
