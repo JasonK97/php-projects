@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div id="header">
+    <article id="header">
         <h1 id="title">Kent Emporium</h1>
         <div id="right">
             <br><br>
             <input type="text">
             <button type="button">Go</button>
         </div>
-    </div>
+</article>
     <div id="main">
         <h2>Stuff</h2>
     </div>
