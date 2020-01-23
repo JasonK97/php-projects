@@ -19,8 +19,8 @@
         </div>
     </div>
 
-    <h1>Items for Purchase</h1>
-    <form action="checkout.php" method="POST">
+    <h1 style="text-align:center;">Items for Purchase</h1>
+    <form action="" method="POST">
         <!--used from w3Schools-->
         <div class="card">
             <img src="image-asset.jpeg" alt="A Really Nice Pencil" style="width:100%">
