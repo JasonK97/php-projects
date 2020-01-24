@@ -20,14 +20,19 @@
 
       <h3>Just for kicks, let's try it with a form</h3>
       <form action="thursdaySession2.php" method="POST">
-         <input type="checkbox" name="pen" value="pen">Pen<br>
-         <input type="submit" name="Submit" value="Submit!">
+         Pen
+         <input type="submit" name="SubmitPen" value="Submit">
+         Pencil
+         <input type="submit" name="SubmitPencil" value="Submit">
       </form>
       <?php 
-         if(isset($_POST['Submit'])) {
+         if(isset($_POST['SubmitPen'])) {
             $_SESSION["pen"] = $_POST["pen"];
          }
-         
+
+         if(isset($_POST['SubmitPencil'])) {
+            $_SESSION["pencil"] = $_POST["pencil"];
+         }
       ?>
    </body>
 </html>
