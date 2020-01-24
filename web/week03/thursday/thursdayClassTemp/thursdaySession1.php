@@ -19,13 +19,13 @@
       <a href="thursdaySession2.php">Check the variables on another page</a>
 
       <h3>Just for kicks, let's try it with a form</h3>
-      <form action="" method="POST">
-         <input type="text" name="picture">
+      <form action="thursdaySession2.php" method="POST">
+         <input type="checkbox" name="thing" value="Pen">Pen<br>
          <input type="submit" name="Submit" value="Submit!">
       </form>
       <?php 
          if(isset($_POST['Submit'])) {
-            $_SESSION["pictureUrl"] = $_POST["picture"];
+            $_SESSION["favegame"] = $_POST["thing"];
          }
          
       ?>
