@@ -11,7 +11,7 @@
          // Set session variables
          $_SESSION["favcolor"] = "teal";
          $_SESSION["favanimal"] = "cat";
-         $_SESSION["favgame"];
+         $_SESSION["pen"];
          // echo that variables have been set
          echo "Your favorite color is " . $_SESSION["favcolor"] . "<br>";
          echo "Your favorite animal is " . $_SESSION["favanimal"] . "<br>";
@@ -20,12 +20,12 @@
 
       <h3>Just for kicks, let's try it with a form</h3>
       <form action="thursdaySession2.php" method="POST">
-         <input type="checkbox" name="thing" value="Pen">Pen<br>
+         <input type="checkbox" name="pen" value="pen">Pen<br>
          <input type="submit" name="Submit" value="Submit!">
       </form>
       <?php 
          if(isset($_POST['Submit'])) {
-            $_SESSION["favegame"] = $_POST["thing"];
+            $_SESSION["pen"] = $_POST["pen"];
          }
          
       ?>

@@ -7,7 +7,7 @@
 ?>
 <h1>Your favorite color is <?=$c?> and your favorite animal is <?=$a?></h1>
 
-<?php if(isset($_SESSION["favgame"])) { ?>
+<?php if(isset($_SESSION["pen"])) { ?>
    <h3>Again, for kicks... from a form</h3><br>
-   <?=$_SESSION['favegame']?>
+   <?php echo "You selected the " . $_SESSION["pen"]?>
 <?php } ?>
