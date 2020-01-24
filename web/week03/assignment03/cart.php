@@ -25,7 +25,7 @@ $phaser = $_POST["phaser"];
         </div>
     </div>
 
-    <p>
+    <form action="" form="POST">
         <?php
         if (isset($_SESSION["pencil"])) {
             echo "You selected the " . $pencil . "<br>";
@@ -35,7 +35,7 @@ $phaser = $_POST["phaser"];
             echo "You selected the " . $phaser . "<br>";
         }
         ?>
-    </p>
+    </form>
 </body>
 
 </html>
