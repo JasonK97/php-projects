@@ -1,5 +1,8 @@
 <?php
     session_start();
+    $_SESSION["pencil"];
+    $_SESSION["ring"];
+    $_SESSION["phaser"];
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +34,7 @@
             <h1>A Really Nice Pencil</h1>
             <p class="price">$19.99</p>
             <p>Carved from the wood of the great big tree in the movie Avatar, this is a nice pencil.</p>
-            <p><button>Add to Cart</button></p>
+            <p><button name="Pencil" >Add to Cart</button></p>
         </div>
         <br>
         <div class="card">
@@ -39,7 +42,7 @@
             <h1>The One Ring</h1>
             <p class="price">$499.99</p>
             <p>Forged in the great Mount Doom, this ring is all powerful and provides the ability to go invisible. Previously owned by the Dark Lord himself, Sauron!</p>
-            <p><button>Add to Cart</button></p>
+            <p><button name="Ring">Add to Cart</button></p>
         </div>
         <br>
         <div class="card">
@@ -47,10 +50,19 @@
             <h1>Stun Phaser</h1>
             <p class="price">$34.99</p>
             <p>Created for use of officers of Starfleet, we finally got the ability to disable the kill function and sell to the general public.</p>
-            <p><button>Add to Cart</button></p>
+            <p><button name="Phaser">Add to Cart</button></p>
         </div>
         <br>
     </form>
+    <?php
+        if(isset($_POST['Pencil'])) {
+            $_SESSION["pencil"] = "Pencil";
+        } else if(isset($_POST['Ring'])) {
+            $_SESSION["ring"] = "Ring";
+        } else if(isset($_POST['Phaser'])) {
+            $_SESSION["phaser"] = "Phaser";
+        }
+    ?>
 </body>
 
 </html>

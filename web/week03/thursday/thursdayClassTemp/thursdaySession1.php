@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
    <body>
-      <?php
+   <?php
          // remove previous session variable
 
          // Set session variables

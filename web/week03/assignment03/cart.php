@@ -18,5 +18,17 @@
             <a class="active" href="cart.php">View Cart</a>
         </div>
     </div>
+
+    <?php
+        if(isset($_SESSION["pencil"])) {
+            echo "You selected the " . $_SESSION["pencil"] . "<br>";
+         }
+         else if(isset($_SESSION["ring"])) {
+            echo "You selected the " . $_SESSION["ring"] . "<br>";
+         }
+         else if(isset($_SESSION["phaser"])) {
+             echo "You selected the " . $_SESSION["phaser"] . "<br>";
+         }
+    ?>
 </body>
 </html>
