@@ -1,3 +1,9 @@
+<?php
+    $pencil = $_POST["pencil"];
+    $ring = $_POST["ring"];
+    $phaser = $_POST["phaser"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,13 +27,13 @@
 
     <?php
         if(isset($_SESSION["pencil"])) {
-            echo "You selected the " . $_SESSION["pencil"] . "<br>";
+            echo "You selected the " . $pencil . "<br>";
          }
          else if(isset($_SESSION["ring"])) {
-            echo "You selected the " . $_SESSION["ring"] . "<br>";
+            echo "You selected the " . $ring . "<br>";
          }
          else if(isset($_SESSION["phaser"])) {
-             echo "You selected the " . $_SESSION["phaser"] . "<br>";
+             echo "You selected the " . $phaser . "<br>";
          }
     ?>
 </body>
