@@ -1,8 +1,8 @@
 <?php
     session_start();
-    $_SESSION["pencil"] = "Pencil";
-    $_SESSION["ring"] = "Ring";
-    $_SESSION["phaser"] = "Phaser";
+    $_SESSION["pencil"] = "p";
+    $_SESSION["ring"] = "r";
+    $_SESSION["phaser"] = "ph";
 ?>
 
 <!DOCTYPE html>
