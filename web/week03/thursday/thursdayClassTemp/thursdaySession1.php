@@ -22,13 +22,16 @@
       <h3>Just for kicks, let's try it with a form</h3>
       <form action="thursdaySession2.php" method="POST">
          Pen
-         <input type="submit" name="SubmitPen" value="Submit"><br>
+         <input type="submit" name="SubmitPen" value="Pen"><br>
          Pencil
-         <input type="submit" name="SubmitPencil" value="Submit">
+         <input type="submit" name="SubmitPencil" value="Pencil">
       </form>
       <?php 
+
+
          if(isset($_POST['SubmitPen'])) {
-            $_SESSION["pen"] = "Pen";
+            $pen = $_POST["SubmitPen"];
+            $_SESSION["pen"] = $pen;
          }
 
          if(isset($_POST['SubmitPencil'])) {
