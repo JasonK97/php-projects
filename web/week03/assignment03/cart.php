@@ -1,7 +1,7 @@
 <?php
-    $pencil = $_POST["pencil"];
-    $ring = $_POST["ring"];
-    $phaser = $_POST["phaser"];
+$pencil = $_POST["pencil"];
+$ring = $_POST["ring"];
+$phaser = $_POST["phaser"];
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +25,17 @@
         </div>
     </div>
 
-    <?php
-        if(isset($_SESSION["pencil"])) {
+    <p>
+        <?php
+        if (isset($_SESSION["pencil"])) {
             echo "You selected the " . $pencil . "<br>";
-         }
-         else if(isset($_SESSION["ring"])) {
+        } else if (isset($_SESSION["ring"])) {
             echo "You selected the " . $ring . "<br>";
-         }
-         else if(isset($_SESSION["phaser"])) {
-             echo "You selected the " . $phaser . "<br>";
-         }
-    ?>
+        } else if (isset($_SESSION["phaser"])) {
+            echo "You selected the " . $phaser . "<br>";
+        }
+        ?>
+    </p>
 </body>
+
 </html>
