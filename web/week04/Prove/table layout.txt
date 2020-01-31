@@ -1,0 +1,26 @@
+USERS
+	id		PRIMARY KEY
+	username
+	password
+	display_name
+
+CHARACTER
+	id			PRIMARY KEY
+	user_id			FOREIGN KEY
+	user_display_name 	FOREIGN KEY
+	character_name
+	class
+	level
+	race
+	alignment
+	strength
+	dexterity
+	constitution
+	intelligence
+	wisdom
+	charisma
+	maxHP
+	accessible_items
+	currency
+	feats
+	features
