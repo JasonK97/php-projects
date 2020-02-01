@@ -1,6 +1,6 @@
-CREATE TABLE public.user
+CREATE TABLE public.profile
 (
-    id                  SERIAL          NOT NULL    PRIMARY KEY,
+    --id                  SERIAL          NOT NULL    PRIMARY KEY,
     username            VARCHAR(100)    NOT NULL    UNIQUE,
     password            VARCHAR(100)    NOT NULL,
     display_name        VARCHAR(100)    NOT NULL    UNIQUE
@@ -9,8 +9,8 @@ CREATE TABLE public.user
 CREATE TABLE public.character
 (
     id                  SERIAL          NOT NULL    PRIMARY KEY,
-    user_id             INT             NOT NULL    REFERENCES public.user(id),
-    user_display_name   VARCHAR(100)    NOT NULL    REFERENCES public.user(display_name),
+    --user_id             INT             NOT NULL    REFERENCES public.profile(id),
+    --user_display_name   VARCHAR(100)    NOT NULL    REFERENCES public.profile(display_name),
     character_name      VARCHAR(100)    NOT NULL,
     class               VARCHAR(100)    NOT NULL,
     character_level     INT             NOT NULL,

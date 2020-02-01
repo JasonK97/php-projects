@@ -1,4 +1,4 @@
-INSERT INTO user (username, password, display_name)
+INSERT INTO profile (username, password, display_name)
 VALUES ('JasonK97', 'jasonkent', 'Jason Kent');
 
 INSERT INTO character (character_name,
@@ -30,6 +30,42 @@ INSERT INTO character (character_name,
                     '12',
                     '15',
                     'Sword, Shield, Armor',
-                    '150gp',
+                    '150',
                     'Armor Proficiency (Chainmail)',
                     'Male, Tall, Thin, Strong');
+
+-- INSERT INTO user (username, password, display_name)
+-- VALUES ('Jason2', 'jasonkent', 'Jason Blake');
+
+-- INSERT INTO character (character_name,
+--                     class,
+--                     character_level,
+--                     race,
+--                     alignment,
+--                     strength,
+--                     dexterity,
+--                     constitution,
+--                     intelligence,
+--                     wisdom,
+--                     charisma,
+--                     maxHP,
+--                     accessible_items,
+--                     currency,
+--                     feats,
+--                     features)
+--             VALUES ('Steve',
+--                     'Fighter',
+--                     '1',
+--                     'Human',
+--                     'Lawful Good',
+--                     '16',
+--                     '14',
+--                     '13',
+--                     '11',
+--                     '10',
+--                     '12',
+--                     '15',
+--                     'Sword, Shield, Armor',
+--                     '150',
+--                     'Armor Proficiency (Leather)',
+--                     'Male, Built, Strong');
