@@ -19,7 +19,7 @@ error_reporting(E_ALL);
         $relationshipName = $db->prepare("SELECT description FROM week05rel WHERE id = $relationship_id");
         $relationshipName->execute();
         while ($rRow = $relationshipName->fetch(PDO::FETCH_ASSOC)) {
-            $relationshipName2 = $rRow["description"];
+            $relationshipNames = $rRow["description"];
         }
         echo "<p>$first_name $last_name is my $relationshipName</p>";
     }
