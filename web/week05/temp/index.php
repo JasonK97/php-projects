@@ -21,7 +21,8 @@ error_reporting(E_ALL);
         while ($rRow = $relationshipName->fetch(PDO::FETCH_ASSOC)) {
             $relationshipNames = $rRow["description"];
         }
-        echo "<p>$first_name $last_name is my $relationshipName</p>";
+        //echo "<p>$first_name $last_name is my $relationshipName</p>";
+        echo $first_name;
     }
 
 ?>
