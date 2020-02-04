@@ -11,7 +11,7 @@ error_reporting(E_ALL);
     $family_members = $db->prepare("SELECT * FROM week05family;");
     $family_members->execute();
 
-    while($fRow = $family_mambers->fetch(PDO::FETCH_ASSOC)) {
+    while($fRow = $family_members->fetch(PDO::FETCH_ASSOC)) {
         $first_name = $fRow["first_name"];
         $last_name = $fRow["last_name"];
         $relationship_id = $fRow["relationship"];
