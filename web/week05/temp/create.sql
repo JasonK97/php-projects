@@ -40,3 +40,9 @@ INSERT INTO week05family ( first_name,
                 VALUES   ( 'David',
                            'Kent',
                            2);
+INSERT INTO week05family ( first_name,
+                           last_name,
+                           relationship)
+                VALUES   ( 'Darth',
+                           'Vader',
+                           2);
