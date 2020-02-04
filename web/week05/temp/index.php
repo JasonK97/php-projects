@@ -8,7 +8,7 @@ error_reporting(E_ALL);
     require "dbConnect.php";
     $db = get_db();
 
-    $family_mambers = $db->prepare("SELECT * FROM week05family;");
+    $family_members = $db->prepare("SELECT * FROM week05family;");
     $family_members->execute();
 
     while($fRow = $family_mambers->fetch(PDO::FETCH_ASSOC)) {
