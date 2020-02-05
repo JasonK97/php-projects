@@ -52,4 +52,8 @@ a:hover {
     a:hover {
         color: rgb(0, 0, 0);
     }
+
+    img {
+        width: 50%;
+    }
   }
