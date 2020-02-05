@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="block">
-  <h1>Welcome to D&D Kent Creator</h1>
+  <h1>Character Inventory</h1>
   <?php 
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
