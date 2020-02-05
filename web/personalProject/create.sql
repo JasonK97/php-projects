@@ -9,8 +9,8 @@ CREATE TABLE public.profile
 CREATE TABLE public.character
 (
     id                  	SERIAL          NOT NULL    PRIMARY KEY,
-    user_id             	INT	            NOT NULL    REFERENCES public.profile(id),
-    user_display_name   	VARCHAR(100)    NOT NULL    REFERENCES public.profile(display_name),
+    --user_id             	INT	            NOT NULL    REFERENCES public.profile(id),
+    --user_display_name   	VARCHAR(100)    NOT NULL    REFERENCES public.profile(display_name),
     character_name     		VARCHAR(100)    NOT NULL,
     class               	VARCHAR(100)    NOT NULL,
     character_level     	INT             NOT NULL,
@@ -22,15 +22,15 @@ CREATE TABLE public.character
 	intelligence        	INT             NOT NULL,
 	wisdom              	INT             NOT NULL,
 	charisma            	INT             NOT NULL,
-	maxHP               	INT             NOT NULL,
+	maxHP               	INT             NOT NULL
 );
 
 CREATE TABLE public.about
 (
 	id						SERIAL			NOT NULL	PRIMARY KEY,
-	user_id             	INT	            NOT NULL    REFERENCES public.profile(id),
-    user_display_name   	VARCHAR(100)    NOT NULL    REFERENCES public.profile(display_name),
-	character_id			INT				NOT NULL	REFERENCES public.character(id),
+	--user_id             	INT	            NOT NULL    REFERENCES public.profile(id),
+    --user_display_name   	VARCHAR(100)    NOT NULL    REFERENCES public.profile(display_name),
+	--character_id			INT				NOT NULL	REFERENCES public.character(id),
 	accessible_items    	VARCHAR(1000), 
 	currency            	INT,
 	feats               	VARCHAR(1000)   NOT NULL,

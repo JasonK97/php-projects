@@ -12,11 +12,7 @@ INSERT INTO character (character_name,
                     intelligence,
                     wisdom,
                     charisma,
-                    maxHP,
-                    accessible_items,
-                    currency,
-                    feats,
-                    features)
+                    maxHP)
             VALUES ('Jalsonio',
                     'Fighter',
                     '1',
@@ -28,11 +24,16 @@ INSERT INTO character (character_name,
                     '11',
                     '10',
                     '12',
-                    '15',
-                    'Sword, Shield, Armor',
-                    '150',
-                    'Armor Proficiency (Chainmail)',
-                    'Male, Tall, Thin, Strong');
+                    '15');
+
+INSERT INTO about (accessible_items,
+                   currency,
+                   feats,
+                   features)
+        VALUES ('Sword, Shield, Armor',
+                '150',
+                'Armor Proficiency (Chainmail)',
+                'Male, Tall, Thin, Strong');
 
 INSERT INTO profile (username, password, display_name)
 VALUES ('MikeD184', 'jasonkent', 'Michael Dufour');
@@ -48,11 +49,7 @@ INSERT INTO character (character_name,
                     intelligence,
                     wisdom,
                     charisma,
-                    maxHP,
-                    accessible_items,
-                    currency,
-                    feats,
-                    features)
+                    maxHP)
             VALUES ('Steve',
                     'Fighter',
                     '1',
@@ -64,8 +61,13 @@ INSERT INTO character (character_name,
                     '11',
                     '10',
                     '12',
-                    '15',
-                    'Bow, Arrows, Armor',
-                    '150',
-                    'Armor Proficiency (Leather)',
-                    'Male, Built, Strong');
+                    '15');
+
+INSERT INTO about (accessible_items,
+                   currency,
+                   feats,
+                   features)
+        VALUES ('Bow, Arrows (100), Armor',
+                '150',
+                'Armor Proficiency (Leather)',
+                'Male, Lean, Strong');

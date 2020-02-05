@@ -2,3 +2,4 @@
 SELECT display_name FROM profile;
 \echo '******************* Character Sheet *******************'
 SELECT * FROM character;
+SELECT * FROM about;

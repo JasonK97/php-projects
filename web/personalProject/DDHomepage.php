@@ -7,11 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../assign.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Zilla+Slab&display=swap" rel="stylesheet">
-  <title>Jason Kent | Assignments</title>
+  <title>Kent Creator | Homepage</title>
 </head>
 <body>
   <div id="block">
-  <?php echo "<h1 id=\"title\">Coming Soon</h1>" ?>
+  <h1>Welcome to D&D Kent Creator</h1>
+  <?php 
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+      
+      
+      require "dbConnect.php";
+      $db = get_db();
+
+      $characterInfo = $db->prepare("SELECT * FROM character;");
+      $characterInfo->execute();
+
+      while($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
+          $characterName = $cRow["character_name"];
+          $characterClass = $cRow["class"];
+      }
+
+      echo "<p>$characterName is a $characterClass</p>";
+  ?>
   <a href="../landingPage.php">Back to Landing Page</a>
   </div>
 </body>
