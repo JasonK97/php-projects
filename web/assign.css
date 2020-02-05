@@ -27,3 +27,18 @@ a {
 a:hover {
     color: rgb(0, 0, 0);
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(1, 9, 56);
+    }
+
+    #block {
+        background-color: rgb(99, 99, 99);
+        border-color: black;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+  }
