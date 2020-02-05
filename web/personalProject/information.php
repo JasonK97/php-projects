@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../assign.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Zilla+Slab&display=swap" rel="stylesheet">
-  <title>Kent Creator | Homepage</title>
+  <title>Kent Creator | Inventory</title>
 </head>
 <body>
   <div id="block">
@@ -21,17 +21,14 @@
       require "dbConnect.php";
       $db = get_db();
 
-      $characterInfo = $db->prepare("SELECT * FROM character;");
-      $characterInfo->execute();
+      $characterInventory = $db->prepare("SELECT * FROM about;");
+      $characterInventory->execute();
 
-      while($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
-          $characterName = $cRow["character_name"];
-          $characterClass = $cRow["class"];
-          $characterLevel = $cRow["character_level"];
+      while($aRow = $characterInventory->fetch(PDO::FETCH_ASSOC)) {
+          $inventory = $aRow["accesible_items"];
       }
 
-      echo "<p>$characterName is a $characterClass and is level $characterLevel.
-      <a href=\"information.php\">view $characterName's inventory here</a></p>";
+      echo "<p>$inventory</p>";
   ?>
   <a href="../landingPage.php">Back to Landing Page</a>
   </div>
