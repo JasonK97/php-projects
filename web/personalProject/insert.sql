@@ -34,7 +34,7 @@ INSERT INTO character (character_name,
                     'Armor Proficiency (Chainmail)',
                     'Male, Tall, Thin, Strong');
 
-INSERT INTO user (username, password, display_name)
+INSERT INTO profile (username, password, display_name)
 VALUES ('MikeD184', 'jasonkent', 'Michael Dufour');
 
 INSERT INTO character (character_name,
