@@ -1,3 +1,3 @@
-DROP TABLE profile;
-DROP TABLE character;
-DROP TABLE about;
+DROP TABLE IF EXISTS profile;
+DROP TABLE IF EXISTS character;
+DROP TABLE IF EXISTS about;
