@@ -1,7 +1,8 @@
 INSERT INTO profile (username, password, display_name)
 VALUES ('JasonK97', 'jasonkent', 'Jason Kent');
 
-INSERT INTO character (character_name,
+INSERT INTO character (user_id,
+                    character_name,
                     class,
                     character_level,
                     race,
@@ -13,7 +14,8 @@ INSERT INTO character (character_name,
                     wisdom,
                     charisma,
                     maxHP)
-            VALUES ('Jalsonio',
+            VALUES ('1',
+                    'Jalsonio',
                     'Fighter',
                     '1',
                     'Half-Elf',
@@ -26,11 +28,15 @@ INSERT INTO character (character_name,
                     '12',
                     '15');
 
-INSERT INTO about (accessible_items,
+INSERT INTO about (user_id,
+                   character_id,
+                   accessible_items,
                    currency,
                    feats,
                    features)
-        VALUES ('Sword, Shield, Armor',
+        VALUES ('1',
+                '1',
+                'Sword, Shield, Armor',
                 '150',
                 'Armor Proficiency (Chainmail)',
                 'Male, Tall, Thin, Strong');
@@ -38,7 +44,8 @@ INSERT INTO about (accessible_items,
 INSERT INTO profile (username, password, display_name)
 VALUES ('MikeD184', 'jasonkent', 'Michael Dufour');
 
-INSERT INTO character (character_name,
+INSERT INTO character (user_id,
+                    character_name,
                     class,
                     character_level,
                     race,
@@ -50,7 +57,8 @@ INSERT INTO character (character_name,
                     wisdom,
                     charisma,
                     maxHP)
-            VALUES ('Steve',
+            VALUES ('2',
+                    'Steve',
                     'Ranger',
                     '1',
                     'Human',
@@ -63,11 +71,15 @@ INSERT INTO character (character_name,
                     '12',
                     '15');
 
-INSERT INTO about (accessible_items,
+INSERT INTO about (user_id,
+                   character_id,
+                   accessible_items,
                    currency,
                    feats,
                    features)
-        VALUES ('Bow, Arrows (100), Armor',
+        VALUES ('2',
+                '2',
+                'Bow, Arrows (100), Armor',
                 '150',
                 'Armor Proficiency (Leather)',
                 'Male, Lean, Strong');
