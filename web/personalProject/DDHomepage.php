@@ -27,9 +27,10 @@
       while($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
           $characterName = $cRow["character_name"];
           $characterClass = $cRow["class"];
+          $characterLevel = $cRow["character_level"];
       }
 
-      echo "<p>$characterName is a $characterClass</p>";
+      echo "<p>$characterName is a $characterClass and is level $characterLevel</p>";
   ?>
   <a href="../landingPage.php">Back to Landing Page</a>
   </div>

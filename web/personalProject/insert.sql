@@ -51,7 +51,7 @@ INSERT INTO character (character_name,
                     charisma,
                     maxHP)
             VALUES ('Steve',
-                    'Fighter',
+                    'Ranger',
                     '1',
                     'Human',
                     'Choatic Evil',
