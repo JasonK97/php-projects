@@ -25,7 +25,7 @@
       $characterInventory->execute();
 
       while($aRow = $characterInventory->fetch(PDO::FETCH_ASSOC)) {
-          $inventory = $aRow["accesible_items"];
+          $inventory = $aRow["accessible_items"];
       }
 
       echo "<p>$inventory</p>";
