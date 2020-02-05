@@ -41,4 +41,15 @@ a:hover {
         margin-right: 20px;
         margin-top: 10px;
     }
+
+    a {
+        text-decoration: none;
+        color: rgb(8, 0, 85);
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        color: rgb(0, 0, 0);
+    }
   }
