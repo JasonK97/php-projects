@@ -30,7 +30,7 @@
 
       echo "<p>$inventory</p>";
   ?>
-  <a href="../DDHomepage.php">Back to Homepage</a>
+  <a href="DDHomepage.php">Back to Homepage</a>
   </div>
 </body>
 </html>
