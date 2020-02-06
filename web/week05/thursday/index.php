@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
 
 
-    require "dbConnect.php";
+    require "../temp/dbConnect.php";
     $db = get_db();
 
     $stuff = $db->prepare("SELECT name FROM w5_event");
