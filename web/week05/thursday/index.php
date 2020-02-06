@@ -7,11 +7,14 @@
     require "../temp/dbConnect.php";
     $db = get_db();
 
-    $stuff = $db->prepare("SELECT name FROM w5_event");
+    $stuff = $db->prepare("SELECT * FROM w5_event");
     $stuff->execute();
 
     while($row = $stuff->fetch(PDO::FETCH_ASSOC)) {
-        echo "<p>" . $row['name'] . "</p>";
-        echo "<img src=\"" . $row['image'] . "\" alt=\"Image\" >";
+        $name = $row['name'];
+        $image = $row['image'];
+
+        echo "<p>$name</p>";
+        echo "<img src=\"$image\" alt=\"Image\" >";
     }
 ?>
