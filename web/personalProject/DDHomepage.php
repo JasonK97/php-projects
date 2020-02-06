@@ -29,10 +29,13 @@
           $characterRace = $cRow["race"];
           $characterClass = $cRow["class"];
           $characterLevel = $cRow["character_level"];
+
+          echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
+          <a href=\"information.php\">view $characterName's inventory here</a></p>";
       }
 
-      echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
-      <a href=\"information.php\">view $characterName's inventory here</a></p>";
+      // echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
+      // <a href=\"information.php\">view $characterName's inventory here</a></p>";
   ?>
   <a href="../landingPage.php">Back to Landing Page</a>
   </div>

@@ -26,9 +26,11 @@
 
       while($aRow = $characterInventory->fetch(PDO::FETCH_ASSOC)) {
           $inventory = $aRow["accessible_items"];
+
+          echo "<p>$inventory</p>";
       }
 
-      echo "<p>$inventory</p>";
+      // echo "<p>$inventory</p>";
   ?>
   <a href="DDHomepage.php">Back to Homepage</a>
   </div>
