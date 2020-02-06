@@ -44,3 +44,33 @@ a:hover {
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(1, 9, 56);
+    }
+
+    #block {
+        background-color: rgb(99, 99, 99);
+        border-color: black;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(8, 0, 85);
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    img {
+        width: 100%;
+    }
+  }
