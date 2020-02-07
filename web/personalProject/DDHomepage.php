@@ -13,7 +13,7 @@
 
 <body>
   <div id="block">
-    <h1>Welcome to Jason's D&D Character Creator</h1>
+    <h1 id="title">Welcome to Jason's D&D Character Creator</h1>
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -29,7 +29,7 @@
       $profileName = $pRow["id"];
       $profileDisplay = $pRow["display_name"];
 
-      echo "$profileDisplay's character(s):";
+      echo "<h2>$profileDisplay's character(s):<h2>";
 
       $characterInfo = $db->prepare("SELECT * FROM character WHERE user_id = $profileName;");
       $characterInfo->execute();
@@ -42,7 +42,7 @@
         $characterLevel = $cRow["character_level"];
 
 
-        echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
+        echo "<p class=\"info\">$characterName is a $characterRace $characterClass and is level $characterLevel.
           <a href=\"information.php\">view $characterName's inventory here</a></p>";
       }
     }
