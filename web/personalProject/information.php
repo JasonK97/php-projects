@@ -35,7 +35,7 @@
 
     $character = $db->prepare("SELECT character_name FROM character WHERE id=$queryParam;");
     $character->execute();
-    while ($cRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
+    while ($cRow = $character->fetch(PDO::FETCH_ASSOC)) {
       $characterName = $cRow["character_name"];
     }
 
