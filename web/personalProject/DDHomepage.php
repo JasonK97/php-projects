@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="shortcut icon" type="image/x-icon" href="../jayswanme.png">
   <meta charset="UTF-8">
@@ -9,42 +10,53 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Zilla+Slab&display=swap" rel="stylesheet">
   <title>Kent Creator | Homepage</title>
 </head>
+
 <body>
   <div id="block">
-  <h1>Welcome to Jason's D&D Character Creator</h1>
-  <?php 
-      ini_set('display_errors', 1);
-      ini_set('display_startup_errors', 1);
-      error_reporting(E_ALL);
-      
-      
-      require "dbConnect.php";
-      $db = get_db();
+    <h1>Welcome to Jason's D&D Character Creator</h1>
+    <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+
+    require "dbConnect.php";
+    $db = get_db();
+
+    $profileInfo = $db->prepare("SELECT * FROM profile;");
+    $profileInfo->execute();
+    while ($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
+      $profileName = $pRow["id"];
+      $profileDisplay = $pRow["display_name"];
+
+      echo "$profileDisplay's character(s):";
 
       $characterInfo = $db->prepare("SELECT * FROM character;");
       $characterInfo->execute();
 
-      while($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
-          $characterName = $cRow["character_name"];
-          $characterRace = $cRow["race"];
-          $characterClass = $cRow["class"];
-          $characterLevel = $cRow["character_level"];
+      while ($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
+        $characterName = $cRow["character_name"];
+        $characterRace = $cRow["race"];
+        $characterClass = $cRow["class"];
+        $characterLevel = $cRow["character_level"];
 
-          $profileInfo = $db->prepare("SELECT * FROM profile;");
-          $profileInfo->execute();
-          while($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
-            $profileName = $pRow["id"];
-            $profileDisplay = $pRow["display_name"];
+        // $profileInfo = $db->prepare("SELECT * FROM profile;");
+        // $profileInfo->execute();
+        // while($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
+        //   $profileName = $pRow["id"];
+        //   $profileDisplay = $pRow["display_name"];
 
-            echo "$profileDisplay's character(s):";
-          }
-          
-          echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
+        //   echo "$profileDisplay's character(s):";
+        // }
+
+        echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
           <a href=\"information.php\">view $characterName's inventory here</a></p>";
       }
+    }
 
-  ?>
-  <a href="../landingPage.php">Back to Landing Page</a>
+    ?>
+    <a href="../landingPage.php">Back to Landing Page</a>
   </div>
 </body>
+
 </html>
