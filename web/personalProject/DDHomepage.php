@@ -35,9 +35,10 @@
           while($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
             $profileName = $pRow["id"];
             $profileDisplay = $pRow["display_name"];
-          }
 
-          echo "$profileDisplay's character(s):";
+            echo "$profileDisplay's character(s):";
+          }
+          
           echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
           <a href=\"information.php\">view $characterName's inventory here</a></p>";
       }
