@@ -20,14 +20,14 @@ CREATE TABLE public.stats
 (
     id						SERIAL			NOT NULL	PRIMARY KEY,
 	character_id			INT				NOT NULL	REFERENCES public.character(id),
+    maxHP               	INT             NOT NULL,
     strength            	INT             NOT NULL,
 	dexterity           	INT             NOT NULL,
 	constitution        	INT             NOT NULL,
 	intelligence        	INT             NOT NULL,
 	wisdom              	INT             NOT NULL,
-	charisma            	INT             NOT NULL,
-	maxHP               	INT             NOT NULL
-);
+	charisma            	INT             NOT NULL
+	);
 
 CREATE TABLE public.about
 (
