@@ -33,8 +33,8 @@
       $profileDisplay = $pRow["display_name"];
     }
 
-    $characterInventory = $db->prepare("SELECT character_name FROM character WHERE id=$queryParam;");
-    $characterInventory->execute();
+    $character = $db->prepare("SELECT character_name FROM character WHERE id=$queryParam;");
+    $character->execute();
     while ($cRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
       $characterName = $cRow["character_name"];
     }
