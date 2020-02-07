@@ -44,7 +44,8 @@
 
 
         echo "<p class=\"info\">$characterName is a $characterRace $characterClass and is level $characterLevel.
-          <a href=\"information.php?id=$characterId\">view $characterName's inventory here</a></p>";
+          <a href=\"information.php?id=$characterId\">$characterName's information</a> | 
+          <a href=\"stats.php?id=$characterId\">$characterName's Stats</a></p>";
       }
     }
 

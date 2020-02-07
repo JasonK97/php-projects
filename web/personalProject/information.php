@@ -12,8 +12,9 @@
 </head>
 
 <body>
+
   <div id="block">
-    <h1 id="title">Character Inventory</h1>
+    <!-- <h1 id="title">About Character</h1> -->
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -32,13 +33,28 @@
       $profileDisplay = $pRow["display_name"];
     }
 
+    $characterInventory = $db->prepare("SELECT character_name FROM character WHERE id=$queryParam;");
+    $characterInventory->execute();
+    while ($cRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
+      $characterName = $cRow["character_name"];
+    }
+
+    echo "<h1 id=\"title\">About Character | $characterName</h1>";
+
     $characterInventory = $db->prepare("SELECT * FROM about WHERE id=$queryParam;");
     $characterInventory->execute();
 
     while ($aRow = $characterInventory->fetch(PDO::FETCH_ASSOC)) {
       $inventory = $aRow["accessible_items"];
+      $currency = $aRow["currency"];
+      $feats = $aRow["feats"];
+      $features = $aRow["features"];
+      $alignment = $aRow["alignment"];
 
-      echo "<p class=\"info\">$inventory</p>";
+      echo "<p class=\"info\">Alignment: $alignment</p>";
+      echo "<p class=\"info\">$characterName's features: $features</p>";
+      echo "<p class=\"info\">Current Inventory: $inventory</p>";
+      echo "<p class=\"info\">Current feats: $feats</p>";
     }
 
     ?>

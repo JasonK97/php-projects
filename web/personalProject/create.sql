@@ -13,8 +13,13 @@ CREATE TABLE public.character
     character_name     		VARCHAR(100)    NOT NULL,
     class               	VARCHAR(100)    NOT NULL,
     character_level     	INT             NOT NULL,
-    race                	VARCHAR(100)    NOT NULL,
-    alignment           	VARCHAR(100)    NOT NULL,
+    race                	VARCHAR(100)    NOT NULL
+);
+
+CREATE TABLE public.stats
+(
+    id						SERIAL			NOT NULL	PRIMARY KEY,
+	character_id			INT				NOT NULL	REFERENCES public.character(id),
     strength            	INT             NOT NULL,
 	dexterity           	INT             NOT NULL,
 	constitution        	INT             NOT NULL,
@@ -31,5 +36,6 @@ CREATE TABLE public.about
 	accessible_items    	VARCHAR(1000), 
 	currency            	INT,
 	feats               	VARCHAR(1000)   NOT NULL,
-	features            	VARCHAR(1000)   NOT NULL
+	features            	VARCHAR(1000)   NOT NULL,
+    alignment           	VARCHAR(100)    NOT NULL
 );
