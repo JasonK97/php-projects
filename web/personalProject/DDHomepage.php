@@ -30,12 +30,18 @@
           $characterClass = $cRow["class"];
           $characterLevel = $cRow["character_level"];
 
+          $profileInfo = $db->prepare("SELECT * FROM profile;");
+          $profileInfo->execute();
+          while($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
+            $profileName = $pRow["id"];
+            $profileDisplay = $pRow["display_name"];
+          }
+
+          echo "$profileDisplay's character(s):";
           echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
           <a href=\"information.php\">view $characterName's inventory here</a></p>";
       }
 
-      // echo "<p>$characterName is a $characterRace $characterClass and is level $characterLevel.
-      // <a href=\"information.php\">view $characterName's inventory here</a></p>";
   ?>
   <a href="../landingPage.php">Back to Landing Page</a>
   </div>
