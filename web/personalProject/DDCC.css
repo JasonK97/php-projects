@@ -28,6 +28,11 @@ h2 {
     font-size: 15px;
 }
 
+.about {
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+}
+
 a {
     text-decoration: none;
     color: rgb(97, 0, 0);

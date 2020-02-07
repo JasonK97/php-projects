@@ -43,7 +43,6 @@
 
     $characterInventory = $db->prepare("SELECT * FROM about WHERE id=$queryParam;");
     $characterInventory->execute();
-
     while ($aRow = $characterInventory->fetch(PDO::FETCH_ASSOC)) {
       $inventory = $aRow["accessible_items"];
       $currency = $aRow["currency"];
@@ -51,10 +50,10 @@
       $features = $aRow["features"];
       $alignment = $aRow["alignment"];
 
-      echo "<p class=\"info\">Alignment: $alignment</p>";
-      echo "<p class=\"info\">$characterName's features: $features</p>";
-      echo "<p class=\"info\">Current Inventory: $inventory</p>";
-      echo "<p class=\"info\">Current feats: $feats</p>";
+      echo "<p class=\"about\"><strong>Alignment:</strong> $alignment</p>";
+      echo "<p class=\"about\"><strong>$characterName's features:</strong> $features</p>";
+      echo "<p class=\"about\"><strong>Current Inventory:</strong> $inventory</p>";
+      echo "<p class=\"about\"><strong>Current feats:</strong> $feats</p>";
     }
 
     ?>
