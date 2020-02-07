@@ -42,7 +42,7 @@
         $characterStats = $db->prepare("SELECT * FROM stats WHERE id=$queryParam;");
         $characterStats->execute();
         while ($sRow = $characterStats->fetch(PDO::FETCH_ASSOC)) {
-            $maxHP = $sRow["maxHP"];
+            // $maxHP = $sRow["maxHP"];
             $strength = $sRow["strength"];
             $dexterity = $sRow["dexterity"];
             $constitution = $sRow["constitution"];
@@ -50,7 +50,7 @@
             $wisdom = $sRow["wisdom"];
             $charisma = $sRow["charisma"];
 
-            echo "<p class=\"about\"><strong>Maximum HP:</strong> $maxHP</p>";
+            // echo "<p class=\"about\"><strong>Maximum HP:</strong> $maxHP</p>";
             echo "<p class=\"about\"><strong>Strength:</strong> $strength</p>";
             echo "<p class=\"about\"><strong>Dexterity:</strong> $dexterity</p>";
             echo "<p class=\"about\"><strong>Constitution:</strong> $constitution</p>";
