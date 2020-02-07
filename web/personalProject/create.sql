@@ -27,7 +27,6 @@ CREATE TABLE public.character
 CREATE TABLE public.about
 (
 	id						SERIAL			NOT NULL	PRIMARY KEY,
-	user_id             	INT	            NOT NULL    REFERENCES public.profile(id),
 	character_id			INT				NOT NULL	REFERENCES public.character(id),
 	accessible_items    	VARCHAR(1000), 
 	currency            	INT,

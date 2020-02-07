@@ -23,7 +23,7 @@
     require "dbConnect.php";
     $db = get_db();
 
-    $profileInfo = $db->prepare("SELECT * FROM profile;");
+    $profileInfo = $db->prepare("SELECT id, display_name FROM profile;");
     $profileInfo->execute();
     while ($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
       $profileName = $pRow["id"];
@@ -43,7 +43,7 @@
 
 
         echo "<p class=\"info\">$characterName is a $characterRace $characterClass and is level $characterLevel.
-          <a href=\"information.php\">view $characterName's inventory here</a></p>";
+          <a href=\"information.php?id=$displayName\">view $characterName's inventory here</a></p>";
       }
     }
 
