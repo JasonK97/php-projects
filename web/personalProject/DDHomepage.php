@@ -36,6 +36,7 @@
 
       while ($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
         $displayName = $cRow["user_id"];
+        $characterId = $cRow["id"];
         $characterName = $cRow["character_name"];
         $characterRace = $cRow["race"];
         $characterClass = $cRow["class"];
@@ -43,7 +44,7 @@
 
 
         echo "<p class=\"info\">$characterName is a $characterRace $characterClass and is level $characterLevel.
-          <a href=\"information.php?id=$displayName\">view $characterName's inventory here</a></p>";
+          <a href=\"information.php?id=$characterId\">view $characterName's inventory here</a></p>";
       }
     }
 
