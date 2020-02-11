@@ -22,7 +22,7 @@
                            $id = $row['id'];
                            $food = $row['food'];
                            
-                           echo "<option value=\"$id\">$food</option>";
+                           echo "<option value='$id'>$food</option>";
                         }
                         // query db
                         // loop through results
