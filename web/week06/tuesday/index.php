@@ -16,7 +16,7 @@
             <div class="col">
                   <select id="inputFood" class="form-control" name="food">
                      <?php
-                        $statemant = $db->prepare("SELECT * FROM w6_food");
+                        $statemant = $db->prepare("SELECT * FROM w6_food;");
                         $statement->execute();
                         while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                            $id = $row['id'];
