@@ -1,9 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <?php
 	require("dbConnect.php");
 	$db = get_db();
 ?>
 <body>
-   <div class="container" style="margin-top:50px;">
+<div class="container" style="margin-top:50px;">
       <form action="insert.php" method="POST">
          <div class="form-row">
             <div>
@@ -38,3 +45,4 @@
       </form>
    </div>
 </body>
+</html>
