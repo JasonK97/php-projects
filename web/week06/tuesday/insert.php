@@ -10,7 +10,7 @@ $db = get_db();
 try
 {
 	// insert into database
-	$query = 'INSERT INTO w6_user (first_name, last_name, food_type) VALUES (:first, :last, 1)';
+	$query = 'INSERT INTO w6_user (first_name, last_name, food_type) VALUES (:first, :last, :food)';
 	$statement = $db->prepare($query);
 	$statment->bindValue(':first', $first);
 	$statment->bindValue(':last', $last);
@@ -19,6 +19,8 @@ try
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
+
+	$userId = $db->lastInsertId("w6_user_id_seq");
 }
 catch (Exception $ex)
 {
