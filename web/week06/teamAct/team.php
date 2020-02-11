@@ -26,7 +26,7 @@
                 <input type="text" placeholder="Verses" name="verse">
             </div>
             <div>
-                <input type="textarea" placeholder="Chapter" name="chapter">
+                <input type="textarea" name="content">
             </div>
             <div>
                 <select id="inputFood" class="form-control" name="topic">
