@@ -18,8 +18,9 @@
                      <?php
                         $statement = $db->prepare("SELECT * FROM w6_food");
                         $statement->execute();
-                        while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                           $id = $row['id'];
+                        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                        {
+                           $id   = $row['id'];
                            $food = $row['food'];
                            echo "<option value='$id'>$food</option>";
                         }
