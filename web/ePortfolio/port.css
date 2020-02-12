@@ -11,7 +11,7 @@ body {
     margin-top: 25px;
 }
 
-#title {
+.title {
     text-align: center;
     font-family: 'Zilla Slab', serif;
 }
