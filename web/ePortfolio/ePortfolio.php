@@ -18,10 +18,10 @@
         <img src="code.jpg" alt="some code">
         <br>
         <h2 class="info">Click here to view my Resume: <br><a href="resume.html">My Resume</a></h2>
-        <br><br><br>
+        <br><br>
         <h2 class="info">Click here for my Github: <br><a href="https://github.com/JasonK97">Github</a></h2>
-        <br><br><br>
-        <h2 class="info">Click here for my Personal Project: <br><a href="personalProject/DDHomepage.php">D&D Character Creator</a></h2>
+        <br><br>
+        <h2 class="info">Click here for my Personal Project: <br><a href="../personalProject/DDHomepage.php">D&D Character Creator</a></h2>
         <?php echo "<p id='date'>Today is " . date("m/d/Y") . "</p>"; ?>
     </div>
 </body>
