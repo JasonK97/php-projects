@@ -17,8 +17,7 @@
         <br>
         <img src="code.jpg" alt="some code">
         <br>
-        <h2 class="info">Click here to view my Resume: <br><!--<a href="resume.html">My Resume</a>--></h2>
-        <embed src="JasonResume.pdf" type="application/pdf" width="100%" height="600px" >
+        <h2 class="info">Click here to view my Resume: <br><a href="resume.html">My Resume</a></h2>
         <br><br>
         <h2 class="info">Click here for my Github: <br><a href="https://github.com/JasonK97">Github</a></h2>
         <br><br>
