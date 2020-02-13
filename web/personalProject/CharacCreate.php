@@ -27,7 +27,7 @@
     <div id="createCh">
       <input type="text" class="form-control" placeholder="Character name" name="name">
       <select id="inputClass" class="form-control" name="class">
-        <option disabled>Class</option>
+        <option selected disabled>Class</option>
         <?php
           $classStuff = $db->prepare("SELECT id, class FROM class");
           $classStuff->execute();
@@ -40,7 +40,7 @@
       </select>
       <input type="number" class="form-control" placeholder="Character level" name="level">
       <select id="inputClass" class="form-control" name="class">
-      <option disabled>Race</option>
+      <option selected disabled>Race</option>
         <?php
           $raceStuff = $db->prepare("SELECT id, race FROM race");
           $raceStuff->execute();
