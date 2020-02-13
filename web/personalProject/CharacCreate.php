@@ -28,7 +28,7 @@
       <input type="text" class="form-control" placeholder="Character name" name="name">
       <select id="inputClass" class="form-control" name="class">
         <?php
-          $classStuff = $db->prepare("SELECT id, class FROM character");
+          $classStuff = $db->prepare("SELECT id, class FROM class");
           $classStuff->execute();
           while ($cRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
             $id = $cRow['id'];
@@ -40,7 +40,7 @@
       <input type="number" class="form-control" placeholder="Character level" name="level">
       <select id="inputClass" class="form-control" name="class">
         <?php
-          $raceStuff = $db->prepare("SELECT id, race FROM character");
+          $raceStuff = $db->prepare("SELECT id, race FROM race");
           $raceStuff->execute();
           while ($cRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
             $id = $cRow['id'];
