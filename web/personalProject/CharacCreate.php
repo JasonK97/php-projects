@@ -31,27 +31,38 @@
         <?php
           $classStuff = $db->prepare("SELECT id, class FROM class");
           $classStuff->execute();
-          while ($cRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
-            $id = $cRow['id'];
-            $class = $cRow['class'];
+          while ($clRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
+            $id = $clRow['id'];
+            $class = $clRow['class'];
             echo "<option value='$id'>$class</option>";
           }
         ?>
       </select>
       <input type="number" class="form-control" placeholder="Character level" name="level">
-      <select id="inputClass" class="form-control" name="class">
+      <select id="inputClass" class="form-control" name="race">
       <option selected disabled>Race</option>
         <?php
           $raceStuff = $db->prepare("SELECT id, race FROM race");
           $raceStuff->execute();
-          while ($cRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
-            $id = $cRow['id'];
-            $race = $cRow['race'];
+          while ($rRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
+            $id = $rRow['id'];
+            $race = $rRow['race'];
             echo "<option value='$id'>$race</option>";
           }
         ?>
+      <select id="inputAlign" class="form-control" name="alignment">
+      <option selected disabled>Alignment</option>
+        <?php
+          $alignStuff = $db->prepare("SELECT id, alignment FROM alignment");
+          $alignStuff->execute();
+          while ($aRow = $alignStuff->fetch(PDO::FETCH_ASSOC)) {
+            $id = $aRow['id'];
+            $alignment = $aRow['alignment'];
+            echo "<option value='$id'>$alignment</option>";
+          }
+        ?>
       <br><br>
-
+      
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>
