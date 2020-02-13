@@ -25,10 +25,31 @@
     ?>
 
     <div id="createCh">
-        <input type="text" class="form-control" placeholder="Character name" name="name">
-        <input type="text" class="form-control" placeholder="Character class" name="class">
-        <input type="text" class="form-control" placeholder="Character level" name="level">
-        <input type="text" class="form-control" placeholder="Race" name="race">
+      <input type="text" class="form-control" placeholder="Character name" name="name">
+      <select id="inputClass" class="form-control" name="class">
+        <?php
+          $classStuff = $db->prepare("SELECT id, class FROM character");
+          $classStuff->execute();
+          while ($cRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
+            $id = $cRow['id'];
+            $class = $cRow['class'];
+            echo "<option value='$id'>$class</option>";
+          }
+        ?>
+      </select>
+      <input type="number" class="form-control" placeholder="Character level" name="level">
+      <select id="inputClass" class="form-control" name="class">
+        <?php
+          $raceStuff = $db->prepare("SELECT id, race FROM character");
+          $raceStuff->execute();
+          while ($cRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
+            $id = $cRow['id'];
+            $race = $cRow['race'];
+            echo "<option value='$id'>$race</option>";
+          }
+        ?>
+      <br><br>
+
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>
