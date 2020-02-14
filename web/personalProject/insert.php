@@ -28,6 +28,7 @@ try
 	$cQuery = 'INSERT INTO character (class_id, race_id, character_name, character_level) VALUES (:class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
     $cStatement->bindValue(':class_id', $class_id);
+    $cStatement->bindValue(':race_id', $race_id);
 	$cStatement->bindValue(':name', $name);
 	$cStatement->bindValue(':level', $level);
     $cStatement->execute();
