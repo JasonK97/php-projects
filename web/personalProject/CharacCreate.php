@@ -30,41 +30,42 @@
       <select id="inputClass" name="class">
         <option selected disabled>Class</option>
         <?php
-          $classStuff = $db->prepare("SELECT id, class FROM class");
-          $classStuff->execute();
-          while ($clRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
-            $id = $clRow['id'];
-            $class = $clRow['class'];
-            echo "<option value='$id'>$class</option>";
-          }
+        $classStuff = $db->prepare("SELECT id, class FROM class");
+        $classStuff->execute();
+        while ($clRow = $classStuff->fetch(PDO::FETCH_ASSOC)) {
+          $id = $clRow['id'];
+          $class = $clRow['class'];
+          echo "<option value='$id'>$class</option>";
+        }
         ?>
       </select>
       <input type="number" placeholder="Character level" name="level">
       <select id="inputClass" name="race">
-      <option selected disabled>Race</option>
+        <option selected disabled>Race</option>
         <?php
-          $raceStuff = $db->prepare("SELECT id, race FROM race");
-          $raceStuff->execute();
-          while ($rRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
-            $id = $rRow['id'];
-            $race = $rRow['race'];
-            echo "<option value='$id'>$race</option>";
-          }
+        $raceStuff = $db->prepare("SELECT id, race FROM race");
+        $raceStuff->execute();
+        while ($rRow = $raceStuff->fetch(PDO::FETCH_ASSOC)) {
+          $id = $rRow['id'];
+          $race = $rRow['race'];
+          echo "<option value='$id'>$race</option>";
+        }
         ?>
       </select>
       <select id="inputAlign" name="alignment">
-      <option selected disabled>Alignment</option>
+        <option selected disabled>Alignment</option>
         <?php
-          $alignStuff = $db->prepare("SELECT id, alignment FROM alignment");
-          $alignStuff->execute();
-          while ($aRow = $alignStuff->fetch(PDO::FETCH_ASSOC)) {
-            $id = $aRow['id'];
-            $alignment = $aRow['alignment'];
-            echo "<option value='$id'>$alignment</option>";
-          }
+        $alignStuff = $db->prepare("SELECT id, alignment FROM alignment");
+        $alignStuff->execute();
+        while ($aRow = $alignStuff->fetch(PDO::FETCH_ASSOC)) {
+          $id = $aRow['id'];
+          $alignment = $aRow['alignment'];
+          echo "<option value='$id'>$alignment</option>";
+        }
         ?>
-      </select>
-      <br><br>
+      </select><br><br>
+    </div>
+    <div id="left-stats">
       <h2 class="miniTitle">Character Stats</h2>
       <input type="number" placeholder="Max HP" name="maxHP"><br>
       <input type="number" placeholder="Strength" name="strength"><br>
@@ -73,6 +74,9 @@
       <input type="number" placeholder="Intelligence" name="intelligence"><br>
       <input type="number" placeholder="Wisdom" name="wisdom"><br>
       <input type="number" placeholder="Charisma" name="charisma"><br>
+    </div>
+    <div id="right-info">
+      <input type="textarea" name="accesible_items" placeholder="Accessible Items">
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>
