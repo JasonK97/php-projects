@@ -35,7 +35,7 @@ CREATE TABLE alignment
 CREATE TABLE character
 (
     id                  	SERIAL          NOT NULL    PRIMARY KEY,
-    user_id             	INT	            NOT NULL    REFERENCES profile(id),
+    --user_id             	INT	            NOT NULL    REFERENCES profile(id),
     class_id               	INT             NOT NULL    REFERENCES class(id),
     race_id                	INT             NOT NULL    REFERENCES race(id),
     character_name     		VARCHAR(100)    NOT NULL,
