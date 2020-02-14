@@ -23,13 +23,13 @@ h2 {
     font-size: 20px;
 }
 
-#left-stats {
+/* #stats {
     float: left;
 }
 
-#right-info {
+#info {
     float: right;
-}
+} */
 
 .info {
     font-family: 'Zilla Slab', serif;
