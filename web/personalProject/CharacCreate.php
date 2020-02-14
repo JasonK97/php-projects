@@ -77,9 +77,9 @@
         <textarea name="accesible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea><br>
         <textarea name="feats" placeholder="Character Feats" rows="2" cols="25"></textarea>
         <textarea name="features" placeholder="Character Features" rows="2" cols="25"></textarea>
+        <button type="submit">Create Character!</button>
       </form>
     </div>
-    <button type="submit">Create Character!</button>
     <a href="../landingPage.php">Back to Landing Page</a>
   </div>
 </body>
