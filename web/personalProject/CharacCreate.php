@@ -26,6 +26,7 @@
 
     <div id="createCh">
       <h2 class="miniTitle">General Info</h2>
+      <hr/>
       <input type="text" placeholder="Character name" name="name">
       <select id="inputClass" name="class">
         <option selected disabled>Class</option>
