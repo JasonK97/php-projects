@@ -13,6 +13,7 @@ $intelligence = $_POST['intelligence'];
 $wisdom = $_POST['wisdom'];
 $charisma = $_POST['charisma'];
 $accessible_items = $_POST['accessible_items'];
+$currency = $_POST['currency'];
 $feats = $_POST['feats'];
 $features = $_POST['features'];
 
@@ -52,7 +53,15 @@ try
     $sStatement->bindValue(':intelligence', $intelligence);
     $sStatement->bindValue(':wisdom', $wisdom);
     $sStatement->bindValue(':charisma', $charisma);
-	$sStatement->execute();
+    $sStatement->execute();
+    
+    $abQuery = 'INSERT INTO about (accessible_items, currency, feats, features) VALUES (:accessible_items, :currency, :feats, :features)';
+	$abStatement = $db->prepare($abQuery);
+	$abStatement->bindValue(':accessible_items', $accessible_items);
+    $abStatement->bindValue(':currency', $currency);
+    $abStatement->bindValue(':feats', $feats);
+    $abStatement->bindValue(':features', $features);
+	$abStatement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
