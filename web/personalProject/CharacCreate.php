@@ -63,7 +63,7 @@
           echo "<option value='$id'>$alignment</option>";
         }
         ?>
-      </select><br><br>
+      </select><br>
     </div>
     <div id="stats">
       <h2 class="miniTitle">Character Stats</h2>
@@ -76,7 +76,8 @@
       <input type="number" placeholder="Charisma" name="charisma"><br>
     </div>
     <div id="info">
-      <input type="textarea" name="accesible_items" placeholder="Accessible Items">
+      <h2 class="minititle">Character Items</h2>
+      <textarea name="accesible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea> 
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>
