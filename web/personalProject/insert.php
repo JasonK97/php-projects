@@ -2,6 +2,7 @@
 // retrieve POST data from the other page
 $name = $_POST['name'];
 $class = $_POST['class'];
+$user_id = $_POST['user_id'];
 $class_id = $_POST['class_id'];
 $level = $_POST['level'];
 $race = $_POST['race'];
@@ -25,9 +26,11 @@ $db = get_db();
 try
 {
     // insert into database
+    echo "$user_id";
     echo "$class_id";
-	$cQuery = 'INSERT INTO character (class_id, race_id, character_name, character_level) VALUES (:class_id, :race_id, :name, :level)';
+	$cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
+    $cStatement->bindValue(':user_id', $user_id);
     $cStatement->bindValue(':class_id', $class_id);
     $cStatement->bindValue(':race_id', $race_id);
 	$cStatement->bindValue(':name', $name);
