@@ -25,7 +25,7 @@
     ?>
 
     <div id="createCh">
-      <form action="insert.php" action="POST">
+      <form action="insert.php" method="POST">
         <h2 class="miniTitle">General Info</h2>
         <input type="text" placeholder="Character name" name="name">
         <select id="inputClass" name="class">
