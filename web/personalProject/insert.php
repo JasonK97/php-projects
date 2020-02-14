@@ -24,7 +24,8 @@ $db = get_db();
 
 try
 {
-	// insert into database
+    // insert into database
+    echo "$class_id";
 	$cQuery = 'INSERT INTO character (class_id, race_id, character_name, character_level) VALUES (:class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
     $cStatement->bindValue(':class_id', $class_id);
