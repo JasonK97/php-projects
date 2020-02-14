@@ -26,17 +26,6 @@ $db = get_db();
 try
 {
     // insert into database
-    echo "$user_id";
-    echo "$class_id";
-	$cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
-    $cStatement = $db->prepare($cQuery);
-    $cStatement->bindValue(':user_id', $user_id);
-    $cStatement->bindValue(':class_id', $class_id);
-    $cStatement->bindValue(':race_id', $race_id);
-	$cStatement->bindValue(':name', $name);
-	$cStatement->bindValue(':level', $level);
-    $cStatement->execute();
-
     $clQuery = 'INSERT INTO class (class) VALUES (:class)';
 	$clStatement = $db->prepare($clQuery);
 	$clStatement->bindValue(':class', $class);
@@ -51,9 +40,19 @@ try
 	$aStatement = $db->prepare($aQuery);
 	$aStatement->bindValue(':alignment', $alignment);
     $aStatement->execute();
+
+    $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
+    $cStatement = $db->prepare($cQuery);
+    $cStatement->bindValue(':user_id', $user_id);
+    $cStatement->bindValue(':class_id', $class_id);
+    $cStatement->bindValue(':race_id', $race_id);
+	$cStatement->bindValue(':name', $name);
+	$cStatement->bindValue(':level', $level);
+    $cStatement->execute();
     
-    $sQuery = 'INSERT INTO stats (maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES (:maxHP, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma)';
-	$sStatement = $db->prepare($sQuery);
+    $sQuery = 'INSERT INTO stats (character_id, maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES (:character_id, :maxHP, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma)';
+    $sStatement = $db->prepare($sQuery);
+    $sStatement->bindValue(':character_id', $character_id);
 	$sStatement->bindValue(':maxHP', $maxHP);
     $sStatement->bindValue(':strength', $strength);
     $sStatement->bindValue(':dexterity', $dexterity);
@@ -63,8 +62,9 @@ try
     $sStatement->bindValue(':charisma', $charisma);
     $sStatement->execute();
     
-    $abQuery = 'INSERT INTO about (accessible_items, currency, feats, features) VALUES (:accessible_items, :currency, :feats, :features)';
-	$abStatement = $db->prepare($abQuery);
+    $abQuery = 'INSERT INTO about (character_id, accessible_items, currency, feats, features) VALUES (:character_id, :accessible_items, :currency, :feats, :features)';
+    $abStatement = $db->prepare($abQuery);
+    $sStatement->bindValue(':character_id', $character_id);
 	$abStatement->bindValue(':accessible_items', $accessible_items);
     $abStatement->bindValue(':currency', $currency);
     $abStatement->bindValue(':feats', $feats);
