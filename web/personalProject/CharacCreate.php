@@ -64,8 +64,6 @@
         }
         ?>
       </select><br>
-    </div>
-    <div id="stats">
       <h2 class="miniTitle">Character Stats</h2>
       <input type="number" placeholder="Max HP" name="maxHP"><br>
       <input type="number" placeholder="Strength" name="strength"><br>
@@ -74,8 +72,6 @@
       <input type="number" placeholder="Intelligence" name="intelligence"><br>
       <input type="number" placeholder="Wisdom" name="wisdom"><br>
       <input type="number" placeholder="Charisma" name="charisma"><br>
-    </div>
-    <div id="info">
       <h2 class="minititle">Character Items</h2>
       <textarea name="accesible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea><br>
       <textarea name="feats" placeholder="Character Feats" rows="2" cols="25"></textarea>

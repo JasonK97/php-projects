@@ -23,13 +23,9 @@ h2 {
     font-size: 20px;
 }
 
-/* #stats {
-    float: left;
+#createCh {
+    text-align: center;
 }
-
-#info {
-    float: right;
-} */
 
 .info {
     font-family: 'Zilla Slab', serif;
