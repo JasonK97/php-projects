@@ -50,6 +50,7 @@
             echo "<option value='$id'>$race</option>";
           }
         ?>
+      </select>
       <select id="inputAlign" class="form-control" name="alignment">
       <option selected disabled>Alignment</option>
         <?php
@@ -61,6 +62,7 @@
             echo "<option value='$id'>$alignment</option>";
           }
         ?>
+      </select>
       <br><br>
       
     </div>
