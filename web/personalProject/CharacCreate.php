@@ -25,8 +25,9 @@
     ?>
 
     <div id="createCh">
-      <input type="text" class="form-control" placeholder="Character name" name="name">
-      <select id="inputClass" class="form-control" name="class">
+      <h2 class="miniTitle">General Info</h2>
+      <input type="text" placeholder="Character name" name="name">
+      <select id="inputClass" name="class">
         <option selected disabled>Class</option>
         <?php
           $classStuff = $db->prepare("SELECT id, class FROM class");
@@ -38,8 +39,8 @@
           }
         ?>
       </select>
-      <input type="number" class="form-control" placeholder="Character level" name="level">
-      <select id="inputClass" class="form-control" name="race">
+      <input type="number" placeholder="Character level" name="level">
+      <select id="inputClass" name="race">
       <option selected disabled>Race</option>
         <?php
           $raceStuff = $db->prepare("SELECT id, race FROM race");
@@ -51,7 +52,7 @@
           }
         ?>
       </select>
-      <select id="inputAlign" class="form-control" name="alignment">
+      <select id="inputAlign" name="alignment">
       <option selected disabled>Alignment</option>
         <?php
           $alignStuff = $db->prepare("SELECT id, alignment FROM alignment");
@@ -64,7 +65,14 @@
         ?>
       </select>
       <br><br>
-      
+      <h2 class="miniTitle">Character Stats</h2>
+      <input type="number" placeholder="Max HP" name="maxHP"><br>
+      <input type="number" placeholder="Strength" name="strength"><br>
+      <input type="number" placeholder="Dexterity" name="dexterity"><br>
+      <input type="number" placeholder="Constitution" name="constitution"><br>
+      <input type="number" placeholder="Intelligence" name="intelligence"><br>
+      <input type="number" placeholder="Wisdom" name="wisdom"><br>
+      <input type="number" placeholder="Charisma" name="charisma"><br>
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>

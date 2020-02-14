@@ -8,28 +8,28 @@ DROP TABLE IF EXISTS alignment;
 
 CREATE TABLE profile
 (
-    id                  SERIAL          NOT NULL    PRIMARY KEY,
-    username            VARCHAR(100)    NOT NULL    UNIQUE,
-    password            VARCHAR(100)    NOT NULL,
-    display_name        VARCHAR(100)    NOT NULL    UNIQUE
+    id                      SERIAL          NOT NULL    PRIMARY KEY,
+    username                VARCHAR(100)    NOT NULL    UNIQUE,
+    password                VARCHAR(100)    NOT NULL,
+    display_name            VARCHAR(100)    NOT NULL    UNIQUE
 );
 
 CREATE TABLE class
 (
-    id			SERIAL			NOT NULL	PRIMARY KEY,
-    class       VARCHAR(100)    NOT NULL
+    id			            SERIAL			NOT NULL	PRIMARY KEY,
+    class                   VARCHAR(100)    NOT NULL
 );
 
 CREATE TABLE race
 (
-    id			SERIAL			NOT NULL	PRIMARY KEY,
-    race        VARCHAR(100)    NOT NULL
+    id			            SERIAL			NOT NULL	PRIMARY KEY,
+    race                    VARCHAR(100)    NOT NULL
 );
 
 CREATE TABLE alignment
 (
-    id              SERIAL          NOT NULL    PRIMARY KEY,
-    alignment       VARCHAR(100)    NOT NULL
+    id                      SERIAL          NOT NULL    PRIMARY KEY,
+    alignment               VARCHAR(100)    NOT NULL
 );
 
 CREATE TABLE character
