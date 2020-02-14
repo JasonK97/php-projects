@@ -14,7 +14,6 @@
 <body>
   <div id="block">
     <h1 id="title">Create your Character</h1>
-    <hr/>
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -79,6 +78,8 @@
     <div id="info">
       <h2 class="minititle">Character Items</h2>
       <textarea name="accesible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea> 
+      <textarea name="feats" placeholder="Character Feats" rows="4" cols="50"></textarea>
+      <textarea name="features" placeholder="Character Features" rows="2" cols="20"></textarea>
     </div>
 
     <a href="../landingPage.php">Back to Landing Page</a>
