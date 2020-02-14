@@ -41,7 +41,7 @@
           ?>
         </select>
         <input type="number" placeholder="Character level" name="level">
-        <select id="inputClass" name="race">
+        <select id="inputRace" name="race">
           <option selected disabled>Race</option>
           <?php
           $raceStuff = $db->prepare("SELECT id, race FROM race");
