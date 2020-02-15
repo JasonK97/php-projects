@@ -2,7 +2,7 @@
 // retrieve REQUEST data from the other page
 $name = $_REQUEST['name'];
 $class = $_REQUEST['class'];
-$user_id = $_POST['user_id_seq'];
+$user_id = $_POST['profile_id_seq'];
 $class_id = $_POST['class_id_seq'];
 $level = $_REQUEST['level'];
 $race = $_REQUEST['race'];
