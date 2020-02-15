@@ -2,12 +2,13 @@
 // retrieve REQUEST data from the other page
 $name = $_REQUEST['name'];
 $class = $_REQUEST['class'];
-$user_id = $_REQUEST['user_id'];
-$class_id = $_REQUEST['class_id'];
+$user_id = $_POST['user_id_seq'];
+$class_id = $_POST['class_id_seq'];
 $level = $_REQUEST['level'];
 $race = $_REQUEST['race'];
-$race_id = $_REQUEST['race_id'];
+$race_id = $_POST['race_id_seq'];
 $alignment = $_REQUEST['alignment'];
+$alignment_id = $_POST['alignment_id_seq'];
 $maxHP = $_REQUEST['maxHP'];
 $strength = $_REQUEST['strength'];
 $dexterity = $_REQUEST['dexterity'];
