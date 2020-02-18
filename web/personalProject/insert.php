@@ -2,14 +2,14 @@
 // retrieve POST data from the other page
 $name = $_POST['name'];
 $class = $_POST['class'];
-$user_id = $_POST['profile_id_seq'];
-$character_id = $_POST['character_id_seq'];
-$class_id = $_POST['class_id_seq'];
+//$user_id = $_POST['profile_id_seq'];
+//$character_id = $_POST['character_id_seq'];
+//$class_id = $_POST['class_id_seq'];
 $level = $_POST['level'];
 $race = $_POST['race'];
-$race_id = $_POST['race_id_seq'];
+//$race_id = $_POST['race_id_seq'];
 $alignment = $_POST['alignment'];
-$alignment_id = $_POST['alignment_id_seq'];
+//$alignment_id = $_POST['alignment_id_seq'];
 $maxHP = $_POST['maxHP'];
 $strength = $_POST['strength'];
 $dexterity = $_POST['dexterity'];
@@ -77,7 +77,7 @@ try
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 
-    $characterId = $db->lastInsertId("character_id_seq");
+    $profileId = $db->lastInsertId("profile_id_seq");
 
 
     //echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
@@ -88,7 +88,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?characterId=" . $characterId);
+header("Location: displayCharacter.php/?profileId=" . $profileId);
 
 die(); 
 ?>
