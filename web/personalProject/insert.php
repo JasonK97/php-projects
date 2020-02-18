@@ -77,7 +77,7 @@ try
 	// get id of last inserted row - save in $userId
 
     //$charId = $db->lastInsertId("character_id_seq");
-    echo "$name, $level, $race, $alignment, $accessible_items";
+    echo "$name, $level, $race, $alignment, $accessible_items, $feats";
 }
 
 catch (Exception $ex)
