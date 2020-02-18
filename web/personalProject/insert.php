@@ -27,51 +27,51 @@ $db = get_db();
 try
 {
     // insert into database
-    $clQuery = 'INSERT INTO class (class) VALUES (:class)';
+    $clQuery = "INSERT INTO class (class) VALUES ('$class')";
 	$clStatement = $db->prepare($clQuery);
-	$clStatement->bindValue(':class', $class);
-	$clStatement->execute();
+	// $clStatement->bindValue('$class', $class);
+	// $clStatement->execute();
 
-    $rQuery = 'INSERT INTO race (race) VALUES (:race)';
+    $rQuery = "INSERT INTO race (race) VALUES ('$race')";
 	$rStatement = $db->prepare($rQuery);
-	$rStatement->bindValue(':race', $race);
-    $rStatement->execute();
+	// $rStatement->bindValue('$race', $race);
+    // $rStatement->execute();
     
-    $aQuery = 'INSERT INTO alignment (alignment) VALUES (:alignment)';
+    $aQuery = "INSERT INTO alignment (alignment) VALUES ('$alignment')";
 	$aStatement = $db->prepare($aQuery);
-	$aStatement->bindValue(':alignment', $alignment);
-    $aStatement->execute();
+	// $aStatement->bindValue('$alignment', $alignment);
+    // $aStatement->execute();
 
-    $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
+    $cQuery = "INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES ('$user_id', '$class_id', '$race_id', '$name', '$level')";
     $cStatement = $db->prepare($cQuery);
-    $cStatement->bindValue(':user_id', $db->lastInsertId("profile_id_seq"));
-    $cStatement->bindValue(':class_id', $db->lastInsertId("class_id_seq"));
-    $cStatement->bindValue(':race_id', $db->lastInsertId("race_id_seq"));
-	$cStatement->bindValue(':name', $name);
-	$cStatement->bindValue(':level', $level);
-    $cStatement->execute();
+    // $cStatement->bindValue('$user_id', $db->lastInsertId("profile_id_seq"));
+    // $cStatement->bindValue('$class_id', $db->lastInsertId("class_id_seq"));
+    // $cStatement->bindValue('$race_id', $db->lastInsertId("race_id_seq"));
+	// $cStatement->bindValue('$name', $name);
+	// $cStatement->bindValue('$level', $level);
+    // $cStatement->execute();
     
-    $sQuery = 'INSERT INTO stats (character_id, maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES (:character_id, :maxHP, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma)';
+    $sQuery = "INSERT INTO stats (character_id, maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES ('$character_id', '$maxHP', '$strength', '$dexterity', '$constitution', '$intelligence', '$wisdom', '$charisma')";
     $sStatement = $db->prepare($sQuery);
-    $sStatement->bindValue(':character_id', $db->lastInsertId("character_id_seq"));
-	$sStatement->bindValue(':maxHP', $maxHP);
-    $sStatement->bindValue(':strength', $strength);
-    $sStatement->bindValue(':dexterity', $dexterity);
-    $sStatement->bindValue(':constitution', $constitution);
-    $sStatement->bindValue(':intelligence', $intelligence);
-    $sStatement->bindValue(':wisdom', $wisdom);
-    $sStatement->bindValue(':charisma', $charisma);
-    $sStatement->execute();
+    // $sStatement->bindValue('$character_id', $db->lastInsertId("character_id_seq"));
+	// $sStatement->bindValue('$maxHP', $maxHP);
+    // $sStatement->bindValue('$strength', $strength);
+    // $sStatement->bindValue('$dexterity', $dexterity);
+    // $sStatement->bindValue('$constitution', $constitution);
+    // $sStatement->bindValue('$intelligence', $intelligence);
+    // $sStatement->bindValue('$wisdom', $wisdom);
+    // $sStatement->bindValue('$charisma', $charisma);
+    // $sStatement->execute();
     
-    $abQuery = 'INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES (:character_id, :alignment_id, :accessible_items, :currency, :feats, :features)';
+    $abQuery = 'INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES ($character_id, $alignment_id, $accessible_items, $currency, $feats, $features)';
     $abStatement = $db->prepare($abQuery);
-    $abStatement->bindValue(':character_id', $db->lastInsertId("character_id_seq"));
-    $abStatement->bindValue(':alignment_id', $db->lastInsertId("alignment_id_seq"));
-	$abStatement->bindValue(':accessible_items', $accessible_items);
-    $abStatement->bindValue(':currency', $currency);
-    $abStatement->bindValue(':feats', $feats);
-    $abStatement->bindValue(':features', $features);
-	$abStatement->execute();
+    // $abStatement->bindValue('$character_id', $db->lastInsertId("character_id_seq"));
+    // $abStatement->bindValue('$alignment_id', $db->lastInsertId("alignment_id_seq"));
+	// $abStatement->bindValue('$accessible_items', $accessible_items);
+    // $abStatement->bindValue('$currency', $currency);
+    // $abStatement->bindValue('$feats', $feats);
+    // $abStatement->bindValue('$features', $features);
+	// $abStatement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
@@ -83,7 +83,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?characterId=" . ':character_id');
+header("Location: displayCharacter.php/?characterId=" . $character_id);
 
 die(); 
 ?>
