@@ -77,10 +77,10 @@ try
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 
-    $userId = $db->lastInsertId("profile_id_seq");
+    $charId = $db->lastInsertId("character_id_seq");
 
 
-    //echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
+    //echo "$name, $level, $race, $alignment, $accessible_items, $feats";
 }
 
 catch (Exception $ex)
@@ -88,7 +88,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?profileId=$userId");
+header("Location: displayCharacter.php/?characterId=$charId");
 
 die(); 
 ?>
