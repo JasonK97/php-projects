@@ -3,7 +3,7 @@
 $name = $_POST['name'];
 $class = $_POST['class'];
 //$user_id = $_POST['profile_id_seq'];
-//$character_id = $_POST['character_id_seq'];
+$character_id = $_POST['character_id_seq'];
 //$class_id = $_POST['class_id_seq'];
 $level = $_POST['level'];
 $race = $_POST['race'];
