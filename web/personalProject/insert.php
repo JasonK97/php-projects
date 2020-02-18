@@ -79,13 +79,8 @@ try
 
     //$charId = $db->lastInsertId("character_id_seq");
 
-    $alignmentName = $db->prepare("SELECT alignment FROM alignment WHERE id = $alignment_id");
-    $alignmentName->execute();
-    while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
-        $alignmentNames = $aRow["alignment"];
-    }
 
-    echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
+    //echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
 }
 
 catch (Exception $ex)
@@ -93,7 +88,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-// header("Location: displayCharacter.php/?characterId=" . $character_id);
+header("Location: displayCharacter.php/?characterId=" . $character_id);
 
 die(); 
 ?>
