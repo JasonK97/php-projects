@@ -6,9 +6,9 @@ $db = get_db();
 <body>
    <div class="container">
       <?php
-      $characterId = $_GET['characterId'];
-      $statement = $db->prepare("SELECT * FROM character WHERE Id = $characterId");
-      $statement->bindValue(':charaterId', $characterId);
+      $profileId = $_GET['profileId'];
+      $statement = $db->prepare("SELECT * FROM character WHERE Id = $profileId");
+      //$statement->bindValue(':charaterId', $characterId);
       $statement->execute();
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
          $id = $row['id'];

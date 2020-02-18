@@ -77,7 +77,7 @@ try
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 
-    $profileId = $db->lastInsertId("profile_id_seq");
+    $userId = $db->lastInsertId("profile_id_seq");
 
 
     //echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
@@ -88,7 +88,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?profileId=" . $profileId);
+header("Location: displayCharacter.php/?profileId=$userId");
 
 die(); 
 ?>
