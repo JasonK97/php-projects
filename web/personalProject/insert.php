@@ -3,6 +3,7 @@
 $name = $_POST['name'];
 $class = $_POST['class'];
 $user_id = $_POST['profile_id_seq'];
+$character_id = $_POST['character_id_seq'];
 $class_id = $_POST['class_id_seq'];
 $level = $_POST['level'];
 $race = $_POST['race'];
@@ -63,7 +64,7 @@ try
     // $sStatement->bindValue('$charisma', $charisma);
     // $sStatement->execute();
     
-    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES ('$character_id', '$alignment_id', '$accessible_items', '$currency', '$feats', '$features')";
+    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES ('$character_id', '$alignment', '$accessible_items', '$currency', '$feats', '$features')";
     $abStatement = $db->prepare($abQuery);
     // $abStatement->bindValue('$character_id', $db->lastInsertId("character_id_seq"));
     // $abStatement->bindValue('$alignment_id', $db->lastInsertId("alignment_id_seq"));
@@ -77,6 +78,10 @@ try
 	// get id of last inserted row - save in $userId
 
     //$charId = $db->lastInsertId("character_id_seq");
+
+    // $iQuery = "";
+    // $iStatement = $db->prepare($iQuery);
+
     echo "$name, $level, $race, $alignment, $accessible_items, $feats";
 }
 
