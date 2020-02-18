@@ -79,7 +79,7 @@ try
 
     //$charId = $db->lastInsertId("character_id_seq");
 
-    $iQuery = "SELECT alignment_id FROM about INNER JOIN about.alignment_id = alignment.alignment";
+    $iQuery = "SELECT alignment_id FROM about INNER JOIN alignment ON about.alignment_id = alignment.alignment";
     $iStatement = $db->prepare($iQuery);
 
     echo "$name, $level, $race, $alignment_id, $accessible_items, $feats";
