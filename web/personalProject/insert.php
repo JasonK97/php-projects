@@ -1,25 +1,25 @@
 <?php
-// retrieve REQUEST data from the other page
-$name = $_REQUEST['name'];
-$class = $_REQUEST['class'];
+// retrieve POST data from the other page
+$name = $_POST['name'];
+$class = $_POST['class'];
 $user_id = $_POST['profile_id_seq'];
 $class_id = $_POST['class_id_seq'];
-$level = $_REQUEST['level'];
-$race = $_REQUEST['race'];
+$level = $_POST['level'];
+$race = $_POST['race'];
 $race_id = $_POST['race_id_seq'];
-$alignment = $_REQUEST['alignment'];
+$alignment = $_POST['alignment'];
 $alignment_id = $_POST['alignment_id_seq'];
-$maxHP = $_REQUEST['maxHP'];
-$strength = $_REQUEST['strength'];
-$dexterity = $_REQUEST['dexterity'];
-$constitution = $_REQUEST['constitution'];
-$intelligence = $_REQUEST['intelligence'];
-$wisdom = $_REQUEST['wisdom'];
-$charisma = $_REQUEST['charisma'];
+$maxHP = $_POST['maxHP'];
+$strength = $_POST['strength'];
+$dexterity = $_POST['dexterity'];
+$constitution = $_POST['constitution'];
+$intelligence = $_POST['intelligence'];
+$wisdom = $_POST['wisdom'];
+$charisma = $_POST['charisma'];
 $accessible_items = $_POST['accessible_items'];
-$currency = $_REQUEST['currency'];
-$feats = $_REQUEST['feats'];
-$features = $_REQUEST['features'];
+$currency = $_POST['currency'];
+$feats = $_POST['feats'];
+$features = $_POST['features'];
 
 require("dbConnect.php");
 $db = get_db();

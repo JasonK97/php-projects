@@ -75,7 +75,7 @@
         <input type="number" placeholder="Charisma" name="charisma"><br>
         <h2 class="minititle">Character Items</h2>
         <input type="number" placeholder="Currency" name="currency"><br><br>
-        <textarea name="accesible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea><br>
+        <textarea name="accessible_items" placeholder="Accessible Items" rows="4" cols="50"></textarea><br>
         <textarea name="feats" placeholder="Character Feats" rows="2" cols="25"></textarea>
         <textarea name="features" placeholder="Character Features" rows="2" cols="25"></textarea><br><br>
         <button type="submit">Create Character!</button>
