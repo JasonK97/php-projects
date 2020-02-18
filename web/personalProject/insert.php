@@ -79,10 +79,13 @@ try
 
     //$charId = $db->lastInsertId("character_id_seq");
 
-    $iQuery = "SELECT alignment_id FROM about INNER JOIN alignment ON about.alignment_id = alignment.alignment";
-    $iStatement = $db->prepare($iQuery);
+    $alignmentName = $db->prepare("SELECT alignment FROM alignment WHERE id = $alignment_id");
+    $alignmentName->execute();
+    while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
+        $alignmentNames = $aRow["alignment"];
+    }
 
-    echo "$name, $level, $race, $alignment_id, $accessible_items, $feats";
+    echo "$name, $level, $race, $alignmentNames, $accessible_items, $feats";
 }
 
 catch (Exception $ex)
