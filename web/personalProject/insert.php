@@ -80,7 +80,7 @@ try
     //$charId = $db->lastInsertId("character_id_seq");
 
 
-    echo "$name is a level $level $slignment $race.<br>
+    echo "$name is a level $level $alignment $race.<br>
     $name right now has: $accessible_items.<br>
     They have $feats, and appear $features";
 }
