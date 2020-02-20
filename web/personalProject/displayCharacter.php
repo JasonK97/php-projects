@@ -17,34 +17,41 @@ $db = get_db();
       $statement->execute();
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
          $id = $row['id'];
-         $name = $row['name'];
-         $level = $row['level'];
+         $name = $row['character_name'];
+         $level = $row['character_level'];
          $race = $row['race_id'];
          $class = $row['class_id'];
 
-         $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
-         $statement2->bindValue(':characterId', $characterId);
-         $statement2->execute();
-         while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
-            $maxHP = $sRow['maxHP'];
-            $strength = $sRow['strength'];
-            $dexterity = $sRow['dexterity'];
-            $constitution = $sRow['constitution'];
-            $intelligence = $sRow['intelligence'];
-            $wisdom = $sRow['wisdom'];
-            $charisma = $sRow['charisma'];
+         $raceName = $db->prepare('SELECT race FROM race WHERE id = :raceId');
+         $raceName->bindValue(':raceId', $race_id);
+         $raceName->execute();
+         while ($raceRow = $raceName->fetch(PDO::FETCH_ASSOC)) {
+            $raceNames = $raceRow["race"];
          }
 
-         $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
-         $statement3->bindValue(':characterId', $characterId);
-         $statement3->execute();
-         while ($aRow = $statement3->fetch(PDO::FETCH_ASSOC)) {
-            $alignment = $aRow['alignment_id'];
-            $accessible_items = $aRow['accessible_items'];
-            $currency = $aRow['currency'];
-            $feats = $aRow['feats'];
-            $features = $aRow['features'];
-         }
+         // $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
+         // $statement2->bindValue(':characterId', $characterId);
+         // $statement2->execute();
+         // while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
+         //    $maxHP = $sRow['maxHP'];
+         //    $strength = $sRow['strength'];
+         //    $dexterity = $sRow['dexterity'];
+         //    $constitution = $sRow['constitution'];
+         //    $intelligence = $sRow['intelligence'];
+         //    $wisdom = $sRow['wisdom'];
+         //    $charisma = $sRow['charisma'];
+         // }
+
+         // $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
+         // $statement3->bindValue(':characterId', $characterId);
+         // $statement3->execute();
+         // while ($aRow = $statement3->fetch(PDO::FETCH_ASSOC)) {
+         //    $alignment = $aRow['alignment_id'];
+         //    $accessible_items = $aRow['accessible_items'];
+         //    $currency = $aRow['currency'];
+         //    $feats = $aRow['feats'];
+         //    $features = $aRow['features'];
+         // }
 
          // $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
          // $alignmentName->bindValue(':alignmentId', $alignment_id);
@@ -53,7 +60,7 @@ $db = get_db();
          //    $alignmentNames = $aRow["alignment"];
          // }
 
-         echo "<h1>$name is a $alignment $race $class</h1>";
+         echo "<h1>$name is a level $level $race $class</h1>";
       }
       ?>
 
