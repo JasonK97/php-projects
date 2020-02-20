@@ -23,7 +23,7 @@ $db = get_db();
          $class = $row['class_id'];
 
          $raceName = $db->prepare('SELECT race FROM race WHERE id = :raceId');
-         $raceName->bindValue(':raceId', $race_id);
+         $raceName->bindValue(':raceId', $race);
          $raceName->execute();
          while ($raceRow = $raceName->fetch(PDO::FETCH_ASSOC)) {
             $raceNames = $raceRow["race"];
