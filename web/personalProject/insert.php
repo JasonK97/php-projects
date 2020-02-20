@@ -90,6 +90,7 @@ try
     $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
     $charState = $db->prepare($charId);
     $charState->execute();
+    $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
 
 
     echo "$name is a level $level $alignment $race.<br>
@@ -102,7 +103,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?characterId=$charId");
+header("Location: displayCharacter.php/?characterId=$charNumId");
 
 die(); 
 ?>
