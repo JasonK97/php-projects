@@ -47,9 +47,9 @@ try
 	// $aStatement->bindValue('$alignment', $alignment);
     // $aStatement->execute();
 
-    $user_id = 1;
-    $class_id = 1;
-    $race_id = 1;
+    // $user_id = 1;
+    // $class_id = 1;
+    // $race_id = 1;
 
     $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);

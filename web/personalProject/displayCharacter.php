@@ -19,14 +19,14 @@ $db = get_db();
          $id = $row['id'];
          $name = $row['character_name'];
          $level = $row['character_level'];
-         $race = $row['race_id'];
+         $race_id = $row['race_id'];
          $class = $row['class_id'];
 
-         $raceName = $db->prepare('SELECT race FROM race WHERE id = :raceId');
-         $raceName->bindValue(':raceId', $race);
+         $raceName = $db->prepare('SELECT race FROM race WHERE id = ' . $race);
+         //$raceName->bindValue(':raceId', $race);
          $raceName->execute();
          while ($raceRow = $raceName->fetch(PDO::FETCH_ASSOC)) {
-            $raceNames = $raceRow["race"];
+            $race = $raceRow["race"];
          }
 
          // $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
