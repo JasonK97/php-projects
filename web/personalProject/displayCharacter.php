@@ -46,19 +46,15 @@ $db = get_db();
             $features = $aRow['features'];
          }
 
-         $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
-         $alignmentName->bindValue(':alignmentId', $alignment_id);
-         $alignmentName->execute();
-         while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
-            $alignmentNames = $aRow["alignment"];
-         }
+         // $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
+         // $alignmentName->bindValue(':alignmentId', $alignment_id);
+         // $alignmentName->execute();
+         // while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
+         //    $alignmentNames = $aRow["alignment"];
+         // }
 
-         echo "<h1>$name is a $alignmentNames $race $class</h1>";
+         echo "<h1>$name is a $alignment $race $class</h1>";
       }
-      // retrieve url parameter
-      // execute query to pull up data from that id
-      // execute another query to get food data
-      // display name and favorite food
       ?>
 
    </div>
