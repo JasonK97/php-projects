@@ -46,7 +46,8 @@ $db = get_db();
             $features = $aRow['features'];
          }
 
-         $alignmentName = $db->prepare("SELECT alignment FROM alignment WHERE id = $alignment_id");
+         $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
+         $alignmentName->bindValue(':alignmentId', $alignment_id);
          $alignmentName->execute();
          while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
             $alignmentNames = $aRow["alignment"];
