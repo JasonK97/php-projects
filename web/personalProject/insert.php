@@ -47,13 +47,13 @@ try
 	// $aStatement->bindValue('$alignment', $alignment);
     // $aStatement->execute();
 
-    // $user_id = 1;
+    $user_id = 1;
     // $class_id = 1;
     // $race_id = 1;
 
-    $cQuery = 'INSERT INTO character (class_id, race_id, character_name, character_level) VALUES (:class_id, :race_id, :name, :level)';
+    $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
-    //$cStatement->bindValue(':user_id', $user_id);
+    $cStatement->bindValue(':user_id', $user_id);
     $cStatement->bindValue(':class_id', $class);
     $cStatement->bindValue(':race_id', $race);
 	$cStatement->bindValue(':name', $name);
