@@ -23,6 +23,7 @@ $db = get_db();
          $class = $row['class_id'];
 
          $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
+         $statement2->bindValue(':characterId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
             $maxHP = $sRow['maxHP'];
@@ -35,6 +36,7 @@ $db = get_db();
          }
 
          $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
+         $statement3->bindValue(':characterId', $characterId);
          $statement3->execute();
          while ($aRow = $statement3->fetch(PDO::FETCH_ASSOC)) {
             $alignment = $aRow['alignment_id'];
