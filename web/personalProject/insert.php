@@ -22,6 +22,10 @@ $currency = $_POST['currency'];
 $feats = $_POST['feats'];
 $features = $_POST['features'];
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require("dbConnect.php");
 $db = get_db();
 
