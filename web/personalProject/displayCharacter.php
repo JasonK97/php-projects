@@ -12,7 +12,7 @@ $db = get_db();
    <div class="container">
       <?php
       $characterId = $_GET['characterId'];
-      $statement = $db->prepare("SELECT * FROM character WHERE Id = $characterId");
+      $statement = $db->prepare('SELECT * FROM character WHERE id = $characterId');
       //$statement->bindValue(':charaterId', $characterId);
       $statement->execute();
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
