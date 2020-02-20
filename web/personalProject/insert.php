@@ -9,7 +9,7 @@ $level = $_POST['level'];
 $race = $_POST['race'];
 //$race_id = $_POST['race_id_seq'];
 $alignment = $_POST['alignment'];
-//$alignment_id = $_POST['alignment_id_seq'];
+$alignment_id = $_POST['alignment_id_seq'];
 $maxHP = $_POST['maxHP'];
 $strength = $_POST['strength'];
 $dexterity = $_POST['dexterity'];
@@ -88,7 +88,8 @@ try
     //$charId = $db->lastInsertId("character_id_seq");
 
     $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
-    $charId->execute();
+    $charState = $db->prepare($charId);
+    $charState->execute();
 
 
     echo "$name is a level $level $alignment $race.<br>
