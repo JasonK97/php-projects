@@ -84,6 +84,7 @@ try
     //$charId = $db->lastInsertId("character_id_seq");
 
     $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
+    $charId->execute();
 
 
     echo "$name is a level $level $alignment $race.<br>

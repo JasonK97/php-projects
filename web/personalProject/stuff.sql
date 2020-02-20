@@ -1,0 +1,1 @@
+INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (1, 1, 1, 'Jason', 1);
