@@ -3,7 +3,7 @@
 $name = $_POST['name'];
 $class = $_POST['class'];
 //$user_id = $_POST['profile_id_seq'];
-$character_id = $_POST['character_id_seq'];
+//$character_id = $_POST['character_id_seq'];
 //$class_id = $_POST['class_id_seq'];
 $level = $_POST['level'];
 $race = $_POST['race'];
@@ -51,11 +51,11 @@ try
     // $class_id = 1;
     // $race_id = 1;
 
-    $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
+    $cQuery = 'INSERT INTO character (class_id, race_id, character_name, character_level) VALUES (:class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
-    $cStatement->bindValue(':user_id', $user_id);
-    $cStatement->bindValue(':class_id', $class_id);
-    $cStatement->bindValue(':race_id', $race_id);
+    //$cStatement->bindValue(':user_id', $user_id);
+    $cStatement->bindValue(':class_id', $class);
+    $cStatement->bindValue(':race_id', $race);
 	$cStatement->bindValue(':name', $name);
 	$cStatement->bindValue(':level', $level);
     $cStatement->execute();
