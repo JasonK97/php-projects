@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: signIn.php");
+	die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,15 +37,18 @@
     require "dbConnect.php";
     $db = get_db();
 
-    $profileInfo = $db->prepare("SELECT id, display_name FROM profile;");
+    $profileInfo = $db->prepare("SELECT id, display_name FROM profile WHERE username = $username;");
     $profileInfo->execute();
     while ($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
       $profileName = $pRow["id"];
+      //$profileUsername = $pRow["username"];
       $profileDisplay = $pRow["display_name"];
+
+      $queryParam = $_GET['id'];
 
       echo "<h2>$profileDisplay's character(s):<h2>";
 
-      $characterInfo = $db->prepare("SELECT * FROM character WHERE user_id = $profileName;");
+      $characterInfo = $db->prepare("SELECT * FROM character WHERE id = $queryParam;");
       $characterInfo->execute();
 
       while ($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
@@ -50,57 +67,9 @@
     }
 
     ?>
-    <a href="../landingPage.php">Back to Landing Page</a>
+    <!--<a href="../landingPage.php">Back to Landing Page</a>-->
+    <a href="signOut.php">Sign Out</a>
   </div>
 </body>
 
-</html>
-
-
-
-
-
-
-
-
-<?php
-/**********************************************************
-* File: home.php
-* Author: Br. Burton
-* 
-* Description: This is the home page. It checks that a user
-*  exists on the session and redirects to the login page
-*  if it does not.
-***********************************************************/
-session_start();
-
-if (isset($_SESSION['username']))
-{
-	$username = $_SESSION['username'];
-}
-else
-{
-	header("Location: signIn.php");
-	die(); // we always include a die after redirects.
-}
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home Page</title>
-</head>
-
-<body>
-<div>
-
-	<h1>Welcome to the homepage!</h1>
-
-	Your username is: <?= $username ?><br /><br />
-
-	<a href="signOut.php">Sign Out</a>
-</div>
-
-</body>
 </html>
