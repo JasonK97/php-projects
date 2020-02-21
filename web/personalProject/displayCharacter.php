@@ -59,16 +59,16 @@
             $charismaNum = $sRow['charisma'];
          }
 
-         // $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
-         // $statement3->bindValue(':characterId', $characterId);
-         // $statement3->execute();
-         // while ($aRow = $statement3->fetch(PDO::FETCH_ASSOC)) {
-         //    $alignment = $aRow['alignment_id'];
-         //    $accessible_items = $aRow['accessible_items'];
-         //    $currency = $aRow['currency'];
-         //    $feats = $aRow['feats'];
-         //    $features = $aRow['features'];
-         // }
+         $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
+         $statement3->bindValue(':characterId', $characterId);
+         $statement3->execute();
+         while ($aRow = $statement3->fetch(PDO::FETCH_ASSOC)) {
+            $alignment = $aRow['alignment_id'];
+            $accessible_items = $aRow['accessible_items'];
+            $currency = $aRow['currency'];
+            $feats = $aRow['feats'];
+            $features = $aRow['features'];
+         }
 
          // $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
          // $alignmentName->bindValue(':alignmentId', $alignment);
@@ -80,7 +80,7 @@
       ?>
 
       <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
-      <!--<p>They have //$maxNumHP hitpoints.</p>-->
+      <p><?= $name ?>'s appearance: <?= $features ?></p>
       <ul id="statNums">
          <li>Strength: <?= $strengthNum ?></li>
          <li>Dexterity: <?= $dexterityNum ?></li>
@@ -89,7 +89,9 @@
          <li>Wisdom: <?= $wisdomNum ?></li>
          <li>Charisma: <?= $charismaNum ?></li>
       </ul>
-      <p><?= $name ?> aligns themself as <?= $alignmentNames ?></p>
+      <p><?= $name ?> has <?= $currency ?> Gold pieces</p>
+      <p>In <?= $name ?>'s bag, they have <?= $accessible_items ?></p>
+      <p><?= $name ?>'s feats: <?= $feats ?></p>
    </div>
 </body>
 
