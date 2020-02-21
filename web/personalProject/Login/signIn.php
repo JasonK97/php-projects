@@ -9,7 +9,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$username = $_POST['txtUser'];
 	$password = $_POST['txtPassword'];
 
-	require("../dbConnect.php");
+	require("dbConnect.php");
 	$db = get_db();
 
 	$query = 'SELECT password FROM login WHERE username=:username';
