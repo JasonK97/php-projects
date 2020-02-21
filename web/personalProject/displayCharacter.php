@@ -52,8 +52,8 @@
          //    $charNum = $charRow['character_id'];
          // }
 
-         $statement2 = $db->prepare('SELECT * FROM stats WHERE character_id = :characterId');
-         $statement2->bindValue(':characterId', $characterId);
+         $statement2 = $db->prepare('SELECT * FROM stats WHERE character_id = :characterNumId');
+         $statement2->bindValue(':characterNumId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
             $maxNumHP = $sRow['maxHP'];
