@@ -18,7 +18,7 @@ error_reporting(E_ALL);
 </head>
 
 <body>
-    <div id="block">
+    <div id="blockLogin">
 
         <h1>Sign up for new account</h1>
 

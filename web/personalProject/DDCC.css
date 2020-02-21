@@ -56,6 +56,20 @@ textarea {
     list-style-type:none
 }
 
+#blockLogin {
+    background-color: rgb(99, 99, 99);
+    border-color: black;
+    padding: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#mainForm {
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
     body {
       background-color: rgb(1, 9, 56);
@@ -68,6 +82,16 @@ textarea {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 10px;
+    }
+
+    #blockLogin {
+        background-color: rgb(99, 99, 99);
+        border-color: black;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        text-align: center;
     }
 
     a {

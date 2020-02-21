@@ -56,7 +56,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 </head>
 
 <body>
-    <div id="block">
+    <div id="blockLogin">
 
         <?php
         if ($badLogin) {
