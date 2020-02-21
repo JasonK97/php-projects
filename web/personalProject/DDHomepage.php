@@ -67,7 +67,7 @@ else
 
     ?>
     <!--<a href="../landingPage.php">Back to Landing Page</a>-->
-    <a href="../personalProject/Login/signOut.php">Sign Out</a>
+    <a href="../Login/signOut.php">Sign Out</a>
   </div>
 </body>
 
