@@ -12,6 +12,11 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     $username = $_POST['txtUser'];
     $password = $_POST['txtPassword'];
 
+    $profId = "SELECT id FROM profile WHERE username = :username";
+    $profState = $db->prepare($charId);
+    $profState->execute();
+    $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
+
     require("dbConnect.php");
     $db = get_db();
 
@@ -28,7 +33,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         if (password_verify($password, $hashedPasswordFromDB)) {
             $_SESSION['username'] = $username;
-            header("Location: ../DDHomepage.php");
+            header("Location: ../DDHomepage.php/?profileId=$profNumId");
             die();
         } else {
             $badLogin = true;
@@ -62,16 +67,11 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         if ($badLogin) {
             echo "Incorrect username or password!<br /><br />\n";
         }
-
-        $profId = "SELECT id FROM profile WHERE username = $username";
-        $profState = $db->prepare($charId);
-        $profState->execute();
-        $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
         ?>
 
         <h1 id="title">Please sign in below:</h1>
 
-        <form id="mainForm" action="signIn.php/?profileId=<?=$profNumId?>" method="POST">
+        <form id="mainForm" action="signIn.php" method="POST">
 
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <br /><br />
