@@ -52,6 +52,10 @@ textarea {
     resize: none;   
 }
 
+#statNums {
+    list-style-type:none
+}
+
 @media only screen and (max-width: 1000px) {
     body {
       background-color: rgb(1, 9, 56);

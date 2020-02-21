@@ -1,16 +1,28 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-require("dbConnect.php");
-$db = get_db();
-?>
+<head>
+   <link rel="shortcut icon" type="image/x-icon" href="../jayswanme.png">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="DDCC.css">
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Zilla+Slab&display=swap" rel="stylesheet">
+   <title>Kent Creator | Character Information Sheet</title>
+</head>
 
 <body>
-   <div class="container">
+   <div id="block">
+      <h1 id="title">Character Information Sheet</h1>
+
       <?php
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+
+      require "dbConnect.php";
+      $db = get_db();
+
       $characterId = $_GET['characterId'];
       $statement = $db->prepare('SELECT * FROM character WHERE id = :characterId');
       $statement->bindValue(':characterId', $characterId);
@@ -66,8 +78,16 @@ $db = get_db();
          // }
       }
       ?>
-      <h1>Character Information Sheet</h1>
-      <p><?=$name?> is a level <?=$level?> <?=$race?> <?=$class?>.</p>
+
+      <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
+      <ul id="statNums">
+         <li>Strength: <?= $strength ?></li>
+         <li>Dexterity: <?= $dexterity ?></li>
+         <li>Constitution: <?= $constitution ?></li>
+         <li>Intelligence: <?= $intelligence ?></li>
+         <li>Wisdom: <?= $wisdom ?></li>
+         <li>Charisma: <?= $charisma ?></li>
+      </ul>
    </div>
 </body>
 

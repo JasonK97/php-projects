@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="DDCC.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Zilla+Slab&display=swap" rel="stylesheet">
-  <title>Kent Creator | Create Character</title>
+  <title>Kent Creator | Character Information</title>
 </head>
 
 <body>
