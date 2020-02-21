@@ -75,11 +75,11 @@ try
     $abStatement = $db->prepare($abQuery);
     $abStatement->bindValue(':character_id', $charNumId);
     $abStatement->bindValue(':alignment_id', $alignment);
-	// $abStatement->bindValue(':accessible_items', $accessible_items);
-    // $abStatement->bindValue(':currency', $currency);
-    // $abStatement->bindValue(':feats', $feats);
-    // $abStatement->bindValue(':features', $features);
-	// $abStatement->execute();
+	$abStatement->bindValue(':accessible_items', $accessible_items);
+    $abStatement->bindValue(':currency', $currency);
+    $abStatement->bindValue(':feats', $feats);
+    $abStatement->bindValue(':features', $features);
+	$abStatement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
@@ -90,14 +90,6 @@ try
     // $charState = $db->prepare($charId);
     // $charState->execute();
     // $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
-
-    echo $strength;
-    echo $dexterity;
-    echo $constitution;
-    echo $intelligence;
-    echo $wisdom;
-    echo $charisma;
-    echo $maxHP;
 }
 
 catch (Exception $ex)
