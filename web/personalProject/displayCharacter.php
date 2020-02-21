@@ -46,14 +46,14 @@
             $class = $classRow['class'];
          }
 
-         $characterNum = $db->prepare('SELECT character_id FROM stats WHERE id = ' . $id);
-         $characterNum->execute();
-         while ($charRow = $characterNum->fetch(PDO::FETCH_ASSOC)) {
-            $charNum = $charRow['character_id'];
-         }
+         // $characterNum = $db->prepare('SELECT character_id FROM stats WHERE id = ' . $id);
+         // $characterNum->execute();
+         // while ($charRow = $characterNum->fetch(PDO::FETCH_ASSOC)) {
+         //    $charNum = $charRow['character_id'];
+         // }
 
-         $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :statId');
-         $statement2->bindValue(':statId', $charNum);
+         $statement2 = $db->prepare('SELECT * FROM stats WHERE character_id = :characterId');
+         $statement2->bindValue(':characterId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
             $maxNumHP = $sRow['maxHP'];
