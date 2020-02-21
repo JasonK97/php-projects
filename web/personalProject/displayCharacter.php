@@ -56,7 +56,7 @@
          $statement2->bindValue(':characterNumId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
-            $maxNumHP = $sRow['maxHP'];
+            //$maxNumHP = $sRow['maxHP'];
             $strengthNum = $sRow['strength'];
             $dexterityNum = $sRow['dexterity'];
             $constitutionNum = $sRow['constitution'];
@@ -86,7 +86,7 @@
       ?>
 
       <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
-      <p>They have <?= $maxNumHP ?> hitpoints.</p>
+      <!--<p>They have //$maxNumHP hitpoints.</p>-->
       <ul id="statNums">
          <li>Strength: <?= $strengthNum ?></li>
          <li>Dexterity: <?= $dexterityNum ?></li>
