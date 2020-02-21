@@ -78,7 +78,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         </form>
 
-        <br /><br />
+        <br />
 
         <p style="text-align:center;">Or <a href="signUp.php">Sign up</a> for a new account.</p>
 
