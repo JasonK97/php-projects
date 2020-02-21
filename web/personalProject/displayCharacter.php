@@ -46,13 +46,14 @@
             $class = $classRow['class'];
          }
 
-         $statId = "SELECT id FROM stats ORDER BY id DESC LIMIT 1";
-         $statState = $db->prepare($statId);
-         $statState->execute();
-         $statId = $statState->fetch(PDO::FETCH_ASSOC)['id'];
+         // $characterNum = $db->prepare('SELECT character_id FROM stats WHERE id = ' . $id);
+         // $characterNum->execute();
+         // while ($classRow = $className->fetch(PDO::FETCH_ASSOC)) {
+         //    $class = $classRow['class'];
+         // }
 
          $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :statId');
-         $statement2->bindValue(':statId', $statId);
+         $statement2->bindValue(':statId', $id);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
             $maxNumHP = $sRow['maxHP'];
