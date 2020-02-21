@@ -12,7 +12,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     $username = $_POST['txtUser'];
     $password = $_POST['txtPassword'];
 
-    $profId = "SELECT id FROM profile WHERE username = :username";
+    $profId = "SELECT id FROM profile WHERE username = $username";
     $profState = $db->prepare($charId);
     $profState->execute();
     $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
