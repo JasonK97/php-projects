@@ -16,7 +16,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     require("dbConnect.php");
     $db = get_db();
 
-    $profId = 'SELECT id FROM profile WHERE username=' . $username;
+    $profId = 'SELECT id FROM profile WHERE username= ' . '\'' . $username . '\'';
     $profState = $db->prepare($profId);
     $profState->execute();
     $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
