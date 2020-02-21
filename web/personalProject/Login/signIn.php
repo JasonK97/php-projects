@@ -16,7 +16,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     require("dbConnect.php");
     $db = get_db();
 
-    $profId = "SELECT id FROM profile WHERE id = $id";
+    $profId = 'SELECT id FROM profile WHERE username=' . $username;
     $profState = $db->prepare($profId);
     $profState->execute();
     $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
@@ -72,7 +72,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         <h1 id="title">Please sign in below:</h1>
 
-        <form id="mainForm" action="signIn.php/?id=<?=$id?>" method="POST">
+        <form id="mainForm" action="signIn.php" method="POST">
 
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <br /><br />
