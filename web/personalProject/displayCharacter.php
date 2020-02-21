@@ -34,18 +34,18 @@ $db = get_db();
             $class = $classRow["class"];
          }
 
-         // $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
-         // $statement2->bindValue(':characterId', $characterId);
-         // $statement2->execute();
-         // while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
-         //    $maxHP = $sRow['maxHP'];
-         //    $strength = $sRow['strength'];
-         //    $dexterity = $sRow['dexterity'];
-         //    $constitution = $sRow['constitution'];
-         //    $intelligence = $sRow['intelligence'];
-         //    $wisdom = $sRow['wisdom'];
-         //    $charisma = $sRow['charisma'];
-         // }
+         $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');
+         $statement2->bindValue(':characterId', $characterId);
+         $statement2->execute();
+         while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
+            $maxHP = $sRow['maxHP'];
+            $strength = $sRow['strength'];
+            $dexterity = $sRow['dexterity'];
+            $constitution = $sRow['constitution'];
+            $intelligence = $sRow['intelligence'];
+            $wisdom = $sRow['wisdom'];
+            $charisma = $sRow['charisma'];
+         }
 
          // $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
          // $statement3->bindValue(':characterId', $characterId);
@@ -64,11 +64,10 @@ $db = get_db();
          // while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
          //    $alignmentNames = $aRow["alignment"];
          // }
-
-         echo "<h1>$name is a level $level $race $class</h1>";
       }
       ?>
-
+      <h1>Character Information Sheet</h1>
+      <p><?=$name?> is a level <?=$level?> <?=$race?> <?=$class?>.</p>
    </div>
 </body>
 
