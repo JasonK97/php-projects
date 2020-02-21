@@ -71,10 +71,10 @@ try
     $sStatement->bindValue(':charisma', $charisma);
     $sStatement->execute();
     
-    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES ('$character_id', '$alignment_id', '$accessible_items', '$currency', '$feats', '$features')";
+    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES (:character_id, :alignment_id, '$accessible_items', '$currency', '$feats', '$features')";
     $abStatement = $db->prepare($abQuery);
-    // $abStatement->bindValue(':character_id', $db->lastInsertId("character_id_seq"));
-    // $abStatement->bindValue(':alignment_id', $db->lastInsertId("alignment_id_seq"));
+    $abStatement->bindValue(':character_id', $charNumId);
+    $abStatement->bindValue(':alignment_id', $alignment);
 	// $abStatement->bindValue(':accessible_items', $accessible_items);
     // $abStatement->bindValue(':currency', $currency);
     // $abStatement->bindValue(':feats', $feats);
@@ -91,7 +91,13 @@ try
     // $charState->execute();
     // $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
 
-    echo $strength, $dexterity, $constitution, $intelligence, $wisdom, $charisma, $maxHP;
+    echo $strength;
+    echo $dexterity;
+    echo $constitution;
+    echo $intelligence;
+    echo $wisdom;
+    echo $charisma;
+    echo $maxHP;
 }
 
 catch (Exception $ex)
