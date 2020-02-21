@@ -20,7 +20,7 @@ error_reporting(E_ALL);
 <body>
     <div id="blockLogin">
 
-        <h1>Sign up for new account</h1>
+        <h1 id="title">Sign up for new account</h1>
 
         <form id="mainForm" action="createAccount.php" method="POST">
 
