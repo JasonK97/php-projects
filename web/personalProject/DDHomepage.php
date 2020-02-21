@@ -33,23 +33,21 @@ else
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    
+    $profileId = $_GET['profileId'];
 
     require "dbConnect.php";
     $db = get_db();
 
-    $profileInfo = $db->prepare("SELECT id, display_name FROM profile ORDER BY id DESC LIMIT 1");
+    $profileInfo = $db->prepare("SELECT id, display_name FROM profile WHERE id = $profileId");
     $profileInfo->execute();
     while ($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
       $profileName = $pRow["id"];
       //$profileUsername = $pRow["username"];
       $profileDisplay = $pRow["display_name"];
 
-      $queryParam = $_GET['id'];
-
       echo "<h2>$profileDisplay's character(s):<h2>";
 
-      $characterInfo = $db->prepare("SELECT * FROM character WHERE id = $queryParam;");
+      $characterInfo = $db->prepare("SELECT * FROM character WHERE id = $profileId;");
       $characterInfo->execute();
 
       while ($cRow = $characterInfo->fetch(PDO::FETCH_ASSOC)) {
@@ -69,7 +67,7 @@ else
 
     ?>
     <!--<a href="../landingPage.php">Back to Landing Page</a>-->
-    <a href="signOut.php">Sign Out</a>
+    <a href="Login/signOut.php">Sign Out</a>
   </div>
 </body>
 
