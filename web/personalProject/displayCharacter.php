@@ -71,7 +71,7 @@
          }
 
          $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
-         $alignmentName->bindValue(':alignmentId', $alignment_id);
+         $alignmentName->bindValue(':alignmentId', $alignment);
          $alignmentName->execute();
          while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
             $alignmentNames = $aRow["alignment"];
@@ -89,7 +89,7 @@
          <li>Wisdom: <?= $wisdomNum ?></li>
          <li>Charisma: <?= $charismaNum ?></li>
       </ul>
-      <p><?= $name ?> aligns themself as <?=$alignment?></p>
+      <p><?= $name ?> aligns themself as <?= $alignmentNames ?></p>
    </div>
 </body>
 
