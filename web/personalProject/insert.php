@@ -2,12 +2,8 @@
 // retrieve POST data from the other page
 $name = $_POST['name'];
 $class = $_POST['class'];
-//$user_id = $_POST['profile_id_seq'];
-//$character_id = $_POST['character_id_seq'];
-//$class_id = $_POST['class_id_seq'];
 $level = $_POST['level'];
 $race = $_POST['race'];
-//$race_id = $_POST['race_id_seq'];
 $alignment = $_POST['alignment'];
 //$alignment_id = $_POST['alignment_id_seq'];
 $maxHP = $_POST['maxHP'];
@@ -95,6 +91,7 @@ try
     // $charState->execute();
     // $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
 
+    echo $strength, $dexterity, $constitution, $intelligence, $wisdom, $charisma, $maxHP;
 }
 
 catch (Exception $ex)
@@ -102,7 +99,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: displayCharacter.php/?characterId=$charNumId");
+//header("Location: displayCharacter.php/?characterId=$charNumId");
 
 die(); 
 ?>
