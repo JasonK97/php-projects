@@ -7,7 +7,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
-	header("Location: /Login/signIn.php");
+	header("Location: Login/signIn.php");
 	die();
 }
 

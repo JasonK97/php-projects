@@ -21,7 +21,7 @@
         <br><br><br>
         <h2 class="info">Click here for my Weekly Assignments directory: <br><a href="index.php">Index</a></h2>
         <br><br><br>
-        <h2 class="info">Click here for my Personal Project: <br><a href="personalProject/DDHomepage.php">D&D Character Creator</a></h2>
+        <h2 class="info">Click here for my Personal Project: <br><a href="personalProject/Login/signIn.php">D&D Character Creator</a></h2>
         <br><br><br>
         <h2 class="info">Click here for my ePortfolio: <br><a href="ePortfolio/ePortfolio.php">ePortfolio</a></h2>
         <?php echo "<p id='date'>Today is " . date("m/d/Y") . "</p>"; ?>
