@@ -180,6 +180,7 @@ textarea {
     }
 
     ?>
+    <a style="text-align:center;" href="CharacCreate.php">Create a new Character here</a>
     <!--<a href="../landingPage.php">Back to Landing Page</a>-->
     <a href="../Login/signOut.php">Sign Out</a>
   </div>
