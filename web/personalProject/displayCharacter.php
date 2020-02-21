@@ -50,13 +50,13 @@
          $statement2->bindValue(':characterId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
-            $maxHP = $sRow['maxHP'];
-            $strength = $sRow['strength'];
-            $dexterity = $sRow['dexterity'];
-            $constitution = $sRow['constitution'];
-            $intelligence = $sRow['intelligence'];
-            $wisdom = $sRow['wisdom'];
-            $charisma = $sRow['charisma'];
+            $maxHPNum = $sRow['maxHP'];
+            $strengthNum = $sRow['strength'];
+            $dexterityNum = $sRow['dexterity'];
+            $constitutionNum = $sRow['constitution'];
+            $intelligenceNum = $sRow['intelligence'];
+            $wisdomNum = $sRow['wisdom'];
+            $charismaNum = $sRow['charisma'];
          }
 
          // $statement3 = $db->prepare('SELECT * FROM about WHERE id = :characterId');
@@ -81,12 +81,12 @@
 
       <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
       <ul id="statNums">
-         <li>Strength: <?= $strength ?></li>
-         <li>Dexterity: <?= $dexterity ?></li>
-         <li>Constitution: <?= $constitution ?></li>
-         <li>Intelligence: <?= $intelligence ?></li>
-         <li>Wisdom: <?= $wisdom ?></li>
-         <li>Charisma: <?= $charisma ?></li>
+         <li>Strength: <?= $strengthNum ?></li>
+         <li>Dexterity: <?= $dexterityNum ?></li>
+         <li>Constitution: <?= $constitutionNum ?></li>
+         <li>Intelligence: <?= $intelligenceNum ?></li>
+         <li>Wisdom: <?= $wisdomNum ?></li>
+         <li>Charisma: <?= $charismaNum ?></li>
       </ul>
    </div>
 </body>
