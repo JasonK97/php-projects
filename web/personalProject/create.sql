@@ -11,7 +11,7 @@ CREATE TABLE profile
     id                      SERIAL          NOT NULL    PRIMARY KEY,
     username                VARCHAR(100)    NOT NULL    UNIQUE,
     password                VARCHAR(255)    NOT NULL,
-    display_name            VARCHAR(100)    NOT NULL    UNIQUE
+    display_name            VARCHAR(100)    NOT NULL
 );
 
 CREATE TABLE class
