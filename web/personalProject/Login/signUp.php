@@ -37,7 +37,7 @@ error_reporting(E_ALL);
 
         </form>
 
-        <br><a href="../landingPage.php">Back to Landing Page</a>
+        <br><a href="../../landingPage.php">Back to Landing Page</a>
 
     </div>
 
