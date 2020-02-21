@@ -21,7 +21,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     $profState->execute();
     $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
 
-    $query = 'SELECT password FROM profile WHERE username=\':username\'';
+    $query = 'SELECT password FROM profile WHERE username=:username';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
