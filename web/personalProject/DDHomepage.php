@@ -49,8 +49,8 @@ h2 {
     font-size: 20px;
 }
 
-#createCh {
-    text-align: center;
+#createLink {
+  text-align: center;
 }
 
 .info {
@@ -82,20 +82,6 @@ textarea {
     list-style-type:none
 }
 
-#blockLogin {
-    background-color: rgb(99, 99, 99);
-    border-color: black;
-    padding: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 50px;
-    /* text-align: center; */
-}
-
-#mainForm {
-    text-align: center;
-}
-
 @media only screen and (max-width: 1000px) {
     body {
       background-color: rgb(1, 9, 56);
@@ -110,16 +96,6 @@ textarea {
         margin-top: 10px;
     }
 
-    #blockLogin {
-        background-color: rgb(99, 99, 99);
-        border-color: black;
-        padding: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 10px;
-        text-align: center;
-    }
-
     a {
         text-decoration: none;
         color: rgb(8, 0, 85);
@@ -129,11 +105,6 @@ textarea {
     
     a:hover {
         color: rgb(0, 0, 0);
-    }
-
-    textarea {
-        resize: none;
-        width: 100%;
     }
   }
   </style>
@@ -180,7 +151,7 @@ textarea {
     }
 
     ?>
-    <a style="text-align:center;" href="CharacCreate.php">Create a new Character here</a>
+    <a id="createLink" href="CharacCreate.php">Create a new Character here</a><br>
     <!--<a href="../landingPage.php">Back to Landing Page</a>-->
     <a href="../Login/signOut.php">Sign Out</a>
   </div>
