@@ -11,11 +11,12 @@ $badLogin = false;
 if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     $username = $_POST['txtUser'];
     $password = $_POST['txtPassword'];
+    $id = $_GET['id'];
 
     require("dbConnect.php");
     $db = get_db();
 
-    $profId = "SELECT id FROM profile WHERE username = $username";
+    $profId = "SELECT id FROM profile WHERE id = $id";
     $profState = $db->prepare($profId);
     $profState->execute();
     $profNumId = $profState->fetch(PDO::FETCH_ASSOC)['id'];
