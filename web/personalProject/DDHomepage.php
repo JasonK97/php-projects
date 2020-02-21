@@ -33,17 +33,19 @@ else
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    $queryParam = $_GET['id'];
+    
 
     require "dbConnect.php";
     $db = get_db();
 
-    $profileInfo = $db->prepare("SELECT id, display_name FROM profile WHERE id = $queryParam;");
+    $profileInfo = $db->prepare("SELECT id, display_name FROM profile ORDER BY id DESC LIMIT 1");
     $profileInfo->execute();
     while ($pRow = $profileInfo->fetch(PDO::FETCH_ASSOC)) {
       $profileName = $pRow["id"];
       //$profileUsername = $pRow["username"];
       $profileDisplay = $pRow["display_name"];
+
+      $queryParam = $_GET['id'];
 
       echo "<h2>$profileDisplay's character(s):<h2>";
 

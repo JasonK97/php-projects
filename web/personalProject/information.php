@@ -14,7 +14,6 @@
 <body>
 
   <div id="block">
-    <!-- <h1 id="title">About Character</h1> -->
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
