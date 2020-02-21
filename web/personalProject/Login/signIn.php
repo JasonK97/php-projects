@@ -71,7 +71,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         <h1 id="title">Please sign in below:</h1>
 
-        <form id="mainForm" action=<?= "signIn.php/?profileId=$profNumId" ?> method="POST">
+        <form id="mainForm" action="signIn.php/?profileId=<?=$profNumId?>" method="POST">
 
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <br /><br />
