@@ -37,13 +37,13 @@
          $raceName = $db->prepare('SELECT race FROM race WHERE id = ' . $race_id);
          $raceName->execute();
          while ($raceRow = $raceName->fetch(PDO::FETCH_ASSOC)) {
-            $race = $raceRow["race"];
+            $race = $raceRow['race'];
          }
 
          $className = $db->prepare('SELECT class FROM class WHERE id = ' . $class_id);
          $className->execute();
          while ($classRow = $className->fetch(PDO::FETCH_ASSOC)) {
-            $class = $classRow["class"];
+            $class = $classRow['class'];
          }
 
          $statement2 = $db->prepare('SELECT * FROM stats WHERE id = :characterId');

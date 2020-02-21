@@ -105,7 +105,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-//header("Location: displayCharacter.php/?characterId=$charNumId");
+header("Location: displayCharacter.php/?characterId=$charNumId");
 
 die(); 
 ?>
