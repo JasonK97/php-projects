@@ -31,25 +31,28 @@ $db = get_db();
 
 try
 {
+    $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
+    $charState = $db->prepare($charId);
+    $charState->execute();
+    $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
+
     // insert into database
     $clQuery = "INSERT INTO class (class) VALUES ('$class')";
 	$clStatement = $db->prepare($clQuery);
-	// $clStatement->bindValue('$class', $class);
+	// $clStatement->bindValue(':class', $class);
 	// $clStatement->execute();
 
     $rQuery = "INSERT INTO race (race) VALUES ('$race')";
 	$rStatement = $db->prepare($rQuery);
-	// $rStatement->bindValue('$race', $race);
+	// $rStatement->bindValue(':race', $race);
     // $rStatement->execute();
     
     $aQuery = "INSERT INTO alignment (alignment) VALUES ('$alignment')";
 	$aStatement = $db->prepare($aQuery);
-	// $aStatement->bindValue('$alignment', $alignment);
+	// $aStatement->bindValue(':alignment', $alignment);
     // $aStatement->execute();
 
     $user_id = 1;
-    // $class_id = 1;
-    // $race_id = 1;
 
     $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
@@ -60,17 +63,17 @@ try
 	$cStatement->bindValue(':level', $level);
     $cStatement->execute();
     
-    $sQuery = "INSERT INTO stats (character_id, maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES ('$character_id', '$maxHP', '$strength', '$dexterity', '$constitution', '$intelligence', '$wisdom', '$charisma')";
+    $sQuery = "INSERT INTO stats (character_id, maxHP, strength, dexterity, constitution, intelligence, wisdom, charisma) VALUES (:character_id, :maxHP, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma)";
     $sStatement = $db->prepare($sQuery);
-    // $sStatement->bindValue('$character_id', $db->lastInsertId("character_id_seq"));
-	// $sStatement->bindValue('$maxHP', $maxHP);
-    // $sStatement->bindValue('$strength', $strength);
-    // $sStatement->bindValue('$dexterity', $dexterity);
-    // $sStatement->bindValue('$constitution', $constitution);
-    // $sStatement->bindValue(':intelligence', $intelligence);
-    // $sStatement->bindValue(':wisdom', $wisdom);
-    // $sStatement->bindValue(':charisma', $charisma);
-    // $sStatement->execute();
+    $sStatement->bindValue(':character_id', $charNumId);
+	$sStatement->bindValue(':maxHP', $maxHP);
+    $sStatement->bindValue(':strength', $strength);
+    $sStatement->bindValue(':dexterity', $dexterity);
+    $sStatement->bindValue(':constitution', $constitution);
+    $sStatement->bindValue(':intelligence', $intelligence);
+    $sStatement->bindValue(':wisdom', $wisdom);
+    $sStatement->bindValue(':charisma', $charisma);
+    $sStatement->execute();
     
     $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES ('$character_id', '$alignment_id', '$accessible_items', '$currency', '$feats', '$features')";
     $abStatement = $db->prepare($abQuery);
@@ -87,15 +90,11 @@ try
 
     //$charId = $db->lastInsertId("character_id_seq");
 
-    $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
-    $charState = $db->prepare($charId);
-    $charState->execute();
-    $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
+    // $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
+    // $charState = $db->prepare($charId);
+    // $charState->execute();
+    // $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
 
-
-    echo "$name is a level $level $alignment $race.<br>
-    $name right now has: $accessible_items.<br>
-    They have $feats, and appear $features";
 }
 
 catch (Exception $ex)
