@@ -209,7 +209,7 @@ textarea {
       <p class="about"><strong>In <?= $name ?>'s bag, they have <?= $accessible_items ?></strong></p>
       <p class="about"><strong><?= $name ?>'s feats: <?= $feats ?></strong></p>
 
-      <a href="DDHomepage.php/?profileId=<?= $profileId ?>">Return to Character List here.</a>
+      <a href="../DDHomepage.php/?profileId=<?= $profileId ?>">Return to Character List here.</a>
    </div>
 </body>
 
