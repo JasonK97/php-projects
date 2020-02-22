@@ -193,20 +193,20 @@ textarea {
       }
       ?>
 
-      <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
+      <p class="about"><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
       <!--<p>They have $maxNumHP hitpoints.</p>-->
-      <p><?= $name ?>'s appearance: <?= $features ?></p>
+      <p class="about"><?= $name ?>'s appearance: <?= $features ?></p>
       <ul id="statNums">
-         <li>Strength: <?= $strengthNum ?></li>
-         <li>Dexterity: <?= $dexterityNum ?></li>
-         <li>Constitution: <?= $constitutionNum ?></li>
-         <li>Intelligence: <?= $intelligenceNum ?></li>
-         <li>Wisdom: <?= $wisdomNum ?></li>
-         <li>Charisma: <?= $charismaNum ?></li>
+         <li class="about">Strength: <?= $strengthNum ?></li>
+         <li class="about">Dexterity: <?= $dexterityNum ?></li>
+         <li class="about">Constitution: <?= $constitutionNum ?></li>
+         <li class="about">Intelligence: <?= $intelligenceNum ?></li>
+         <li class="about">Wisdom: <?= $wisdomNum ?></li>
+         <li class="about">Charisma: <?= $charismaNum ?></li>
       </ul>
-      <p><?= $name ?> has <?= $currency ?> Gold pieces</p>
-      <p>In <?= $name ?>'s bag, they have <?= $accessible_items ?></p>
-      <p><?= $name ?>'s feats: <?= $feats ?></p>
+      <p class="about"><?= $name ?> has <?= $currency ?> Gold pieces</p>
+      <p class="about">In <?= $name ?>'s bag, they have <?= $accessible_items ?></p>
+      <p class="about"><?= $name ?>'s feats: <?= $feats ?></p>
    </div>
 </body>
 
