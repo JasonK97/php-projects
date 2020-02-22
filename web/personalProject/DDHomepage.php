@@ -151,7 +151,7 @@ textarea {
     }
 
     ?>
-    <a id="createLink" href="../personalProject/CharacCreate.php/?profileId=<?= $profileId ?>">Create a new Character here</a><br>
+    <a id="createLink" href="../CharacCreate.php/?profileId=<?= $profileId ?>">Create a new Character here</a><br>
     <!--<a href="../landingPage.php">Back to Landing Page</a>-->
     <a href="../Login/signOut.php">Sign Out</a>
   </div>
