@@ -13,10 +13,10 @@ $constitution = $_POST['constitution'];
 $intelligence = $_POST['intelligence'];
 $wisdom = $_POST['wisdom'];
 $charisma = $_POST['charisma'];
-$accessible_items = $_POST['accessible_items'];
+$accessible_items = htmlspecialchars($_POST['accessible_items']);
 $currency = $_POST['currency'];
-$feats = $_POST['feats'];
-$features = $_POST['features'];
+$feats = htmlspecialchars($_POST['feats']);
+$features = htmlspecialchars($_POST['features']);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
