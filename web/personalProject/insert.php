@@ -72,14 +72,14 @@ try
     $sStatement->bindValue(':charisma', $charisma);
     $sStatement->execute();
     
-    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES (:character_id, :alignment_id, '$accessible_items', '$currency', '$feats', '$features')";
+    $abQuery = "INSERT INTO about (character_id, alignment_id, accessible_items, currency, feats, features) VALUES (:character_id, :alignment_id, '$accessible_items', :currency, '$feats', '$features')";
     $abStatement = $db->prepare($abQuery);
     $abStatement->bindValue(':character_id', $charNumId);
     $abStatement->bindValue(':alignment_id', $alignment);
-	$abStatement->bindValue(':accessible_items', $accessible_items);
+	//$abStatement->bindValue(':accessible_items', $accessible_items);
     $abStatement->bindValue(':currency', $currency);
-    $abStatement->bindValue(':feats', $feats);
-    $abStatement->bindValue(':features', $features);
+    //$abStatement->bindValue(':feats', $feats);
+    //$abStatement->bindValue(':features', $features);
 	$abStatement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
