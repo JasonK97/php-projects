@@ -29,7 +29,8 @@ $db = get_db();
 
 try
 {
-    $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
+    // $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
+    $charId = "SELECT id FROM character WHERE user_id=" . $profileId;
     $charState = $db->prepare($charId);
     $charState->execute();
     $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
