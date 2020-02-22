@@ -137,6 +137,7 @@ textarea {
       require "dbConnect.php";
       $db = get_db();
 
+      $profileId = $_GET['profileId'];
       $characterId = $_GET['characterId'];
       $statement = $db->prepare('SELECT * FROM character WHERE id = :characterId');
       $statement->bindValue(':characterId', $characterId);
@@ -184,17 +185,17 @@ textarea {
             $features = $aRow['features'];
          }
 
-         // $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
-         // $alignmentName->bindValue(':alignmentId', $alignment);
-         // $alignmentName->execute();
-         // while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
-         //    $alignmentNames = $aRow["alignment"];
-         // }
+         $alignmentName = $db->prepare('SELECT alignment FROM alignment WHERE id = :alignmentId');
+         $alignmentName->bindValue(':alignmentId', $alignment);
+         $alignmentName->execute();
+         while ($aRow = $alignmentName->fetch(PDO::FETCH_ASSOC)) {
+            $alignmentNames = $aRow["alignment"];
+         }
       }
       ?>
 
       <p class="about"><strong><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</strong></p>
-      <!--<p>They have $maxNumHP hitpoints.</p>-->
+      <p class="about"><strong>They are <?= $alignmentNames ?>.</strong></p>
       <p class="about"><strong><?= $name ?>'s appearance: <?= $features ?></strong></p>
       <ul id="statNums">
          <li class="about"><strong>Strength: <?= $strengthNum ?></strong></li>
@@ -207,6 +208,8 @@ textarea {
       <p class="about"><strong><?= $name ?> has <?= $currency ?> Gold pieces</strong></p>
       <p class="about"><strong>In <?= $name ?>'s bag, they have <?= $accessible_items ?></strong></p>
       <p class="about"><strong><?= $name ?>'s feats: <?= $feats ?></strong></p>
+
+      <a href="DDHomepage.php/?profileId=<?= $profileId ?>"></a>
    </div>
 </body>
 
