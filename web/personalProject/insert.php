@@ -25,7 +25,7 @@ error_reporting(E_ALL);
 require("dbConnect.php");
 $db = get_db();
 
-$profileId = $_GET['profileId'];
+$user_id = $_GET['profileId'];
 
 try
 {
@@ -51,11 +51,9 @@ try
 	// $aStatement->bindValue(':alignment', $alignment);
     // $aStatement->execute();
 
-    $user_id = 1;
-
     $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
-    $cStatement->bindValue(':user_id', $profileId);
+    $cStatement->bindValue(':user_id', $user_id);
     $cStatement->bindValue(':class_id', $class);
     $cStatement->bindValue(':race_id', $race);
 	$cStatement->bindValue(':name', $name);
