@@ -101,6 +101,3 @@ INSERT INTO alignment (alignment) VALUES ('Chaotic Neutral');
 INSERT INTO alignment (alignment) VALUES ('Lawful Evil');
 INSERT INTO alignment (alignment) VALUES ('Neutral Evil');
 INSERT INTO alignment (alignment) VALUES ('Chaotic Evil');
-
-INSERT INTO profile (username, password, display_name)
-VALUES ('JasonK97', 'jasonkent', 'Jason Kent');
