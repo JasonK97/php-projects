@@ -133,10 +133,10 @@ textarea {
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    $profileId = $_GET['profileId'];
-
     require "dbConnect.php";
     $db = get_db();
+
+    $profileId = $_GET['profileId'];
     ?>
 
     <div id="createCh">
