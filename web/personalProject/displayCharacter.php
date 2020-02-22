@@ -137,13 +137,13 @@ textarea {
       require "dbConnect.php";
       $db = get_db();
 
-      $profileId = $_GET['profileId'];
       $characterId = $_GET['characterId'];
       $statement = $db->prepare('SELECT * FROM character WHERE id = :characterId');
       $statement->bindValue(':characterId', $characterId);
       $statement->execute();
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
          $id = $row['id'];
+         $profileId = ['user_id'];
          $name = $row['character_name'];
          $level = $row['character_level'];
          $race_id = $row['race_id'];
