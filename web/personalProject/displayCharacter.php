@@ -164,7 +164,7 @@ textarea {
          $statement2->bindValue(':characterId', $characterId);
          $statement2->execute();
          while ($sRow = $statement2->fetch(PDO::FETCH_ASSOC)) {
-            $maxNumHP = $sRow['maxHP'];
+            //$maxNumHP = $sRow['maxHP'];
             $strengthNum = $sRow['strength'];
             $dexterityNum = $sRow['dexterity'];
             $constitutionNum = $sRow['constitution'];
@@ -194,7 +194,7 @@ textarea {
       ?>
 
       <p><?= $name ?> is a level <?= $level ?> <?= $race ?> <?= $class ?>.</p>
-      <p>They have <?= $maxNumHP ?> hitpoints.</p>
+      <!--<p>They have $maxNumHP hitpoints.</p>-->
       <p><?= $name ?>'s appearance: <?= $features ?></p>
       <ul id="statNums">
          <li>Strength: <?= $strengthNum ?></li>
