@@ -54,7 +54,7 @@ try
 
     $cQuery = 'INSERT INTO character (user_id, class_id, race_id, character_name, character_level) VALUES (:user_id, :class_id, :race_id, :name, :level)';
     $cStatement = $db->prepare($cQuery);
-    $cStatement->bindValue(':user_id', $user_id);
+    $cStatement->bindValue(':user_id', $profileId);
     $cStatement->bindValue(':class_id', $class);
     $cStatement->bindValue(':race_id', $race);
 	$cStatement->bindValue(':name', $name);
@@ -85,13 +85,6 @@ try
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
-
-    //$charId = $db->lastInsertId("character_id_seq");
-
-    // $charId = "SELECT id FROM character ORDER BY id DESC LIMIT 1";
-    // $charState = $db->prepare($charId);
-    // $charState->execute();
-    // $charNumId = $charState->fetch(PDO::FETCH_ASSOC)['id'];
 }
 
 catch (Exception $ex)
